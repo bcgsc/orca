@@ -1,74 +1,91 @@
 FROM linuxbrew/linuxbrew
 MAINTAINER Shaun Jackman <sjackman@gmail.com>
 
-# Perl
-RUN brew install cpanm
-RUN cpanm Statistics::Descriptive # for amos
-ENV PERL5LIB /home/linuxbrew/perl5/lib/perl5
-
-# Python
-RUN brew install python # for pip and setuptools
-RUN brew install python3
-RUN brew install homebrew/python/numpy # for cerulean
+# ENV PERL5LIB /home/linuxbrew/perl5/lib/perl5
+# RUN brew install cpanm
+# For edirect
+# RUN cpanm HTML::Entities LWP::Simple LWP::Protocol::https
 
 RUN brew tap homebrew/science
-
-RUN brew install a5
-RUN brew install abacas
-RUN brew install abyss-explorer
-RUN brew install abyss
-RUN brew install ace-corrector
-#RUN brew install allpaths-lg # g++-4.8: internal compiler error
-RUN brew install amos
-RUN brew install andi
-RUN brew install art
-RUN brew install artemis
-RUN brew install astral
-#RUN brew install atram # Dependency express fails to build.
-RUN brew install augustus
-RUN brew install bam-readcount
-RUN brew install bamhash
-RUN brew install bamtools
-RUN brew install bamutil
-RUN brew install barrnap
-RUN brew install bcalm
-RUN brew install bcftools
-RUN brew install beast
-RUN brew install bedops
-RUN brew install bedtools
-RUN brew install bfc
-RUN brew install bioawk
-RUN brew install biobloomtools
-RUN brew install biointerchange
-RUN brew install blasr
-RUN brew install blast --without-check # check fails
-RUN brew install blat
-RUN brew install bless # error: boost/array.hpp: No such file or directory
-RUN brew install bowtie
-RUN brew install bowtie2
-RUN brew install bpipe
-RUN brew install bwa
+RUN brew install \ 
+a5 \
+abacas \
+abyss-explorer \
+abyss \
+ace-corrector \
+adam 
+# RUN brew install adapterremoval
+RUN brew install afra \
+allpaths-lg \
+# RUN brew install amos
+analysis \
+andi \
+# RUN brew install anvio
+arcs \
+art \
+artemis \
+astral \
+atram 
+# RUN brew install augustus
+RUN brew install bam-readcount \
+bamhash \
+bamm \
+bamtools \
+bamutil \
+barrnap \
+bbtools \
+bcalm \
+bcftools \
+beagle \
+beast \
+beast2 \
+bedops \
+bedtools \
+beetl \
+bfc \
+bioawk \
+biobloomtools \
+biointerchange \
+biomake \
+# RUN brew install biopieces
+blasr \
+blast \
+# RUN brew install blat
+# RUN brew install bless
+bowtie \
+bowtie2 \
+bpipe \
+breseq \
+busco \
+bwa 
+RUN brew install canu
 RUN brew install cap3
 RUN brew install cd-hit
-#RUN brew install cegma # Dependency genewise fails to build.
+# RUN brew install cegma
 RUN brew install celera-assembler
+RUN brew install centrifuge
 RUN brew install cerulean
-#RUN brew install circlator # Dependency homebrew/python/pymummer fails to build.
+RUN brew install circlator
 RUN brew install clark
 RUN brew install clonalframeml
+RUN brew install clonehd
 RUN brew install clustal-omega
 RUN brew install clustal-w
-RUN brew install consed
-RUN brew install corset
+# RUN brew install corset
 RUN brew install cytoscape
 RUN brew install daligner
 RUN brew install dazz_db
+# RUN brew install delly
 RUN brew install dextractor
 RUN brew install diamond
 RUN brew install dida
+RUN brew install discovar
+# RUN brew install discovardenovo
 RUN brew install dsk
-RUN brew install edirect
-RUN brew install ensembl-tools
+RUN brew install dwgsim
+RUN brew install e-mem
+# RUN brew install edirect
+# RUN brew install ensembl-tools
 RUN brew install exonerate
 RUN brew install express
 RUN brew install fasta
@@ -77,178 +94,208 @@ RUN brew install fastq-tools
 RUN brew install fastqc
 RUN brew install fasttree
 RUN brew install fastuniq
+RUN brew install fastx_toolkit
+RUN brew install fermi-lite
 RUN brew install fermi
 RUN brew install fermi2
 RUN brew install fermikit
 RUN brew install flash
-RUN brew install fqzcomp
+RUN brew install freebayes
 RUN brew install freec
 RUN brew install fsa
-RUN brew install gaemr
-RUN brew install garli
+RUN brew install fwdpp
+# RUN brew install gaemr
+# RUN brew install garli
 RUN brew install gatb
-RUN brew install genewise # error: undefined reference to `g_hash_table_lookup'
-RUN brew install genometools
-RUN brew install gfatools
+# RUN brew install gatk
+RUN brew install geneid
+# RUN brew install genewise
+# RUN brew install genometools
 RUN brew install gingr
 RUN brew install glimmerhmm
-RUN brew install gmap-gsnap
+# RUN brew install gmap-gsnap
 RUN brew install grabix
-RUN brew install graphlan
+# RUN brew install graphlan
 RUN brew install gubbins
-RUN brew install harvest-tools
+# RUN brew install harvest-tools
 RUN brew install hisat
 RUN brew install hisat2
 RUN brew install hlaminer
 RUN brew install hmmer
 RUN brew install hmmer2
-RUN brew install htqc
 RUN brew install htsbox
 RUN brew install htslib
 RUN brew install humann2
 RUN brew install idba
-RUN brew install igv
-RUN brew install igvtools
+#RUN brew install igv
+#RUN brew install igvtools
+RUN brew install impute2
 RUN brew install infernal
+RUN brew install iqtree
 RUN brew install iva
-RUN brew install jellyfish
 RUN brew install jellyfish-1.1
-RUN brew install kallisto
-RUN brew install kat
-RUN brew install kmc
-RUN brew install kmergenie
-RUN brew install kmerstream
-RUN brew install last
-RUN brew install libsequence
-RUN brew install lighter
-RUN brew install links-scaffolder
-RUN brew install lumpy-sv
-RUN brew install mafft
-RUN brew install maker
-RUN brew install maq
-RUN brew install mash
-RUN brew install masurca
-RUN brew install megahit
-RUN brew install meme
-RUN brew install meraculous
-RUN brew install metaphlan
-RUN brew install mhap
-RUN brew install minced
-RUN brew install minia
-RUN brew install mira
-RUN brew install mitofy
-RUN brew install mlst
-RUN brew install mrbayes
-RUN brew install multi-worm-tracker
-RUN brew install mummer
-RUN brew install muscle
-RUN brew install musket
-RUN brew install nanopolish
-RUN brew install ncbi-c++-toolkit
-RUN brew install ncbi-c++-toolkit.rb+
-RUN brew install ncbi-c++-toolkit.rb++
-RUN brew install ncbi-c++-toolkit.rb+3
-RUN brew install ncbi-c++-toolkit.rb-
-RUN brew install ncbi-c++-toolkit.rb-1
-RUN brew install ncl
-RUN brew install newick-utils
-RUN brew install newick-utils.rb+
-RUN brew install newicktools
-RUN brew install nextflow
-RUN brew install nonpareil
-RUN brew install novoalign
-RUN brew install nxtrim
+RUN brew install jellyfish
+RUN brew install kaiju \
+kallisto \
+# RUN brew install kat
+kent-tools \
+kmacs \
+kmc \
+kmergenie \
+# RUN brew install kmerstream
+kollector \
+kraken
+RUN brew install last \
+libbigwig \
+libpll \
+libsequence \
+links-scaffolder \
+lobstr \
+lsd \
+lumpy-sv
+RUN brew install macse \
+mafft \
+# RUN brew install maker
+mapsembler2 \
+maq \
+mash \
+# RUN brew install masurca
+mcl \
+megahit \
+# RUN brew install meme
+# RUN brew install metaphlan
+mhap \
+minced \
+minia \
+miniasm \
+minimap \
+mir-prefer \
+# RUN brew install mira
+mitofy \
+# RUN brew install mlst
+# RUN brew install mothur
+mrbayes \
+multi-worm-tracker \
+mummer \
+muscle 
+RUN brew install nanopolish \
+# RUN brew install ncbi-c++-toolkit
+ncl \
+newick-utils \
+newicktools \
+nextflow \
+nonpareil \
+novoalign \
+ntcard \
+nxtrim 
 RUN brew install oases
-RUN brew install ogdraw
-RUN brew install pagan
+# RUN brew install ogdraw
+RUN brew install oma
+# RUN brew install orthofinder
+RUN brew install paml
 RUN brew install pandaseq
 RUN brew install parsnp
 RUN brew install pathd8
 RUN brew install pathvisio
-RUN brew install pbh5tools
-RUN brew install pbsuite
+# RUN brew install pbsuite
 RUN brew install pear
 RUN brew install phipack
+RUN brew install phlawd
 RUN brew install phylip
 RUN brew install phyml
-RUN brew install phyutility
+RUN brew install phyx
 RUN brew install picard-tools
+RUN brew install piler
+RUN brew install pilercr
 RUN brew install pilon
-RUN brew install platanus
 RUN brew install plink
-RUN brew install plink2
+# RUN brew install plink2
 RUN brew install poa
-RUN brew install populations
+# RUN brew install populations
+# RUN brew install poretools
 RUN brew install prodigal
-RUN brew install prokka
+# RUN brew install prokka
 RUN brew install proteinortho
 RUN brew install psmc
-RUN brew install quake
-RUN brew install quast
+# RUN brew install quaff
+# RUN brew install quake
+# RUN brew install quast
 RUN brew install quest
 RUN brew install quorum
-RUN brew install r8s
-RUN brew install rampart
-RUN brew install ray
-RUN brew install readseq
-RUN brew install readsim
-RUN brew install reapr
-RUN brew install recon
-RUN brew install repeatmasker
-RUN brew install repeatmodeler
-RUN brew install repeatscout
-RUN brew install rmblast
-RUN brew install rna-star
-RUN brew install rnammer
-RUN brew install sailfish
-RUN brew install salmon
-RUN brew install salmon.rb+
-RUN brew install sambamba
-RUN brew install samblaster
-RUN brew install samtools
-RUN brew install samtools-0.1
-RUN brew install scarpa
-RUN brew install seqan
-RUN brew install seqtk
-RUN brew install shrimp
-RUN brew install sickle
-RUN brew install simulate-pcr
-RUN brew install skewer
-RUN brew install smalt
-RUN brew install snap
-RUN brew install snap-aligner
-RUN brew install snpeff
-RUN brew install soapdenovo
-RUN brew install sortmerna
-RUN brew install spades
-RUN brew install sparseassembler
-RUN brew install spici
-RUN brew install squeezambler
-RUN brew install sratoolkit
-RUN brew install ssake
-RUN brew install sspace
-RUN brew install sspace-longread
-RUN brew install stacks
-RUN brew install stringtie
-RUN brew install tasr
-RUN brew install tbl2asn
-RUN brew install trans-abyss
-RUN brew install transdecoder
-RUN brew install transrate-tools
-RUN brew install trimadap
-RUN brew install trimal
-RUN brew install trimmomatic
-RUN brew install trinity
-RUN brew install ucsc-genome-browser
+RUN brew install racon \
+# RUN brew install rampart
+rapsearch2 \
+raxml \
+# RUN brew install ray
+rcorrector \
+readseq \
+readsim \
+# RUN brew install reapr
+recon \
+repeatmasker \
+repeatmodeler \
+repeatscout \
+rmblast \
+rna-star \
+rnammer \
+ropebwt2
+RUN brew install sailfish \
+salmon \
+sambamba \
+samblaster \
+# RUN brew install samtools-0.1
+samtools \
+scarpa \
+sdsl-lite \
+seqan \
+seqtk \
+sequel \
+sga \
+shrimp \
+# RUN brew install simulate-pcr
+skewer \
+smalt \
+# RUN brew install smrtanalysis
+snap-aligner \
+# RUN brew install snap
+snoscan \
+snp-sites \
+snpeff \
+soapdenovo \
+# RUN brew install sortmerna
+spaced \
+spades \
+spici \
+squeezambler \
+sratoolkit \
+ssake \
+stringtie \
+swarm
+RUN brew install tagdust \ 
+tasr \
+tbl2asn \
+tophat \
+# RUN brew install trans-abyss
+# RUN brew install trans_proteomic_pipeline
+transdecoder \
+transrate-tools \
+trf \
+trimadap \
+trimal \
+trimmomatic \
+trinity \
+trnascan 
+# RUN brew install ucsc-genome-browser
 RUN brew install uproc
 RUN brew install vague
 RUN brew install varscan
 RUN brew install vcake
 RUN brew install vcflib
-RUN brew install vcflib.rb+
 RUN brew install vcftools
 RUN brew install velvet
-RUN brew install velvetoptimiser
 RUN brew install viennarna
+RUN brew install vsearch
+RUN brew install vt
 RUN brew install weblogo
+# RUN brew install wiggletools
 RUN brew install yaha
