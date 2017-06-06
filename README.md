@@ -9,3 +9,5 @@ ORCA is a platform for bioinformatics analysis. It is suited for those wishing t
 snap-aligner: it is not popular and conflicts with a `snap`
 
 analysis: it is not popular and conflicts with a `biopieces`
+
+allpaths-lg: conflicts with `discovardenovo` (more newer one)
