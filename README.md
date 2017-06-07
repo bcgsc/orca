@@ -6,8 +6,10 @@ ORCA is a platform for bioinformatics analysis. It is suited for those wishing t
 
 
 ### Removed packages
-snap-aligner: it is not popular and conflicts with a `snap`
+`snap-aligner`: it is not popular and conflicts with a `snap`
 
-analysis: it is not popular and conflicts with a `biopieces`
+`analysis`: it is not popular and conflicts with a `biopieces`
 
-allpaths-lg: conflicts with `discovardenovo` (more newer one)
+`allpaths-lg`: conflicts with `discovardenovo` (more newer one)
+
+`meraculous`: it is not popular and trouble to fix for now
