@@ -33,7 +33,7 @@ RUN brew install scipy
  
 RUN brew install R
 
-sudo apt-get install zip -y
+RUN sudo apt-get install zip -y
 RUN brew install unzip
 RUN brew install vim
 
