@@ -1,4 +1,4 @@
-FROM tmozgacheva/orca-b
+FROM bcgsc/orca-2
 
 RUN brew install canu \
 cap3 \
