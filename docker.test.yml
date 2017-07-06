@@ -1,0 +1,5 @@
+sut:
+  build: .
+  dockerfile: Dockerfile.test
+  environment:
+    - HOMEBREW_DEVELOPER=1
