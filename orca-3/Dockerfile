@@ -14,6 +14,7 @@ clonehd \
 clustal-omega \
 clustal-w \
 cmake \
+cutadapt \
 curl \
 cufflinks \
 # RUN brew install corset
