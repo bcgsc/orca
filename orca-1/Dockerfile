@@ -23,6 +23,7 @@ RUN brew install libxml2
 RUN pip install python-igraph
 RUN pip install pysam
 RUN pip install htseq pandas pyvcf virtualenv
+RUN pip install cwlref-runner
 
 RUN brew install tcsh
 
