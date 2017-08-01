@@ -1,0 +1,36 @@
+#!/bin/sh
+
+if [ "$1" = "-c" ];then
+	cmd=`echo $2 | grep "rsync\|scp"`
+	if [ -z "$cmd" ]; then
+		echo "======================================================="
+		echo "           Welcome to BCGSC ORCA Service          "
+		echo "Only direct rsync or scp file transfer commands allowed"
+		echo "======================================================="
+	else	
+		exec $2
+	fi
+else
+	NAME=$(id -un)_$UID
+	USER=$(id -un)
+	CONTAINER_HOSTNAME=$(id -un)-ORCA
+	LOG_FILE=/orca_repo/access_log/docker_login.log
+
+	echo "Welcome to GSC ORCA Phase 1, USER $(id -un), Your home directory is mounted under /home/$USER"
+	echo "Currently installed tools can be found via 'brew list' and 'ls ~/Software/bin' in shell"
+	echo "You can remotely transfer data via rsync/scp to your /home/$USER directory"
+#	echo "Your Hackathon project folder is mounted under /hackathon, please keep your raw data, scripts here"
+
+	CONTAINER=$(docker -H :4000 ps -a --format "{{.ID}}\t{{.Names}}" | grep "$NAME" | cut -f1)
+
+	if [ -z "$CONTAINER" ]; then
+        	echo -e "$(date +"%D %H:%M") \t USER $(id -un) FIRST LOGIN launching new container" >> $LOG_FILE
+        	exec docker -H :4000 run -u 1000 --name $NAME -h $CONTAINER_HOSTNAME -t -i -w /home/$USER -v $HOME:/home/$USER -v /projects/hackathon:/hackathon orca:v2.7 /bin/bash
+        	echo "$(docker ps -a --format "{{.ID}}\t{{.Names}}" | grep "$NAME" | cut -f1) container created for USER $(id un) $UID" >> $LOG_FILE
+	else
+        	echo -e "$(date +"%D %H:%M") \t $CONTAINER FOUND retrieving old container" >> $LOG_FILE
+		docker -H :4000 start $CONTAINER >> $LOG_FILE
+		exec docker -H :4000  exec -it $CONTAINER /bin/bash
+        	echo "$CONTAINER restarted for USER $(id -un) $UID" >> $LOG_FILE
+	fi
+fi
