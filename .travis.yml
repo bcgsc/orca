@@ -1,0 +1,12 @@
+language: nodejs
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - npm install -g dockerfilelint
+
+script:
+  - find . -name Dockerfile | xargs dockerfilelint
+  - for dockerDir in *; do make $dockerDir; done
