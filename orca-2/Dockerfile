@@ -39,7 +39,7 @@ beetl \
 bfc \
 bioawk \
 biobloomtools \
-biointerchange \
+# biointerchange \ get rid of it because the license and linkage problem
 biomake \
 bison \
 # biopieces \ for future, export variables
