@@ -54,6 +54,7 @@ trimmomatic \
 trinity \
 trnascan 
 #RUN brew install ucsc-genome-browser
+RUN brew install unicycler
 RUN brew install uproc
 RUN brew install vague \
 varscan \
