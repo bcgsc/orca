@@ -2,7 +2,8 @@ FROM linuxbrew/linuxbrew
 LABEL maintainer="tatyana.mozgacheva@gmail.com"
 #https://github.com/bcgsc/orca/issues/2
 ENV PERL5LIB /home/linuxbrew/perl5/lib/perl5
-RUN brew install perl cpanm gcc zlib expat berkeley-db mysql
+RUN brew install -s perl 
+RUN brew install cpanm gcc zlib expat berkeley-db mysql
 
 RUN brew install ruby
 
@@ -15,15 +16,16 @@ RUN cpanm -i Unix::Processors
 RUN cpanm Bio::Perl
 
 RUN brew install python # for pip and setuptools
+RUN ln -s python2 /home/linuxbrew/.linuxbrew/bin/python
 RUN brew install python3
 RUN brew install numpy # for cerulean
-RUN pip install biopython
+RUN pip2 install biopython
 
 RUN brew install libxml2
-RUN pip install python-igraph
-RUN pip install pysam
-RUN pip install htseq pandas pyvcf virtualenv
-RUN pip install cwlref-runner
+RUN pip2 install python-igraph
+RUN pip2 install pysam
+RUN pip2 install htseq pandas pyvcf virtualenv
+RUN pip2 install cwlref-runner
 
 RUN brew install tcsh
 
@@ -34,7 +36,6 @@ RUN brew install R
 
 RUN sudo apt-get install zip -y
 RUN brew install unzip
-RUN brew install vim
 
 RUN brew tap homebrew/science
 
