@@ -1,4 +1,4 @@
-FROM bcgsc/orca-2
+FROM bcgsc/orca-2:2017.08.23
 
 RUN brew install canu \
 cap3 \
