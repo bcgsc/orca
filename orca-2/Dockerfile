@@ -44,7 +44,7 @@ biobloomtools \
 biomake \
 bison \
 # biopieces \ for future, export variables
-blasr \
+# blasr \ fix test later
 blast \
 blat \
 bless \
