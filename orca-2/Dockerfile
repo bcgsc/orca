@@ -22,6 +22,7 @@ atram
 RUN brew install augustus
 
 RUN brew install bam-readcount \
+bam2wig \
 bamhash \
 bamm \
 bamtools \
