@@ -21,7 +21,7 @@ cufflinks \
 cytoscape
 RUN brew install daligner \
 dazz_db \
-# RUN brew install delly
+delly \
 dextractor \
 diamond \
 dida \
@@ -33,8 +33,8 @@ RUN brew install e-mem \
 edirect \
 emacs \
 # RUN brew install ensembl-tools no formulae
-exonerate 
-# express
+exonerate \
+express
 
 RUN brew install fasta \
 fastml \
@@ -101,7 +101,7 @@ RUN brew install jpeg
 
 RUN brew install kaiju \
 kallisto \
-kat \ 
+kat \
 kent-tools \
 kmacs \
 kmc \
@@ -116,7 +116,7 @@ libsequence \
 libtool \
 lighter \
 links-scaffolder \
-lobstr \
+# lobstr \ fix test later
 lsd \
 lua \
-lumpy-sv 
+lumpy-sv
