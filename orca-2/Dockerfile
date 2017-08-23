@@ -1,4 +1,4 @@
-FROM bcgsc/orca-1
+FROM bcgsc/orca-1:2017.08.23
 RUN brew install \ 
 a5 \
 abacas \
