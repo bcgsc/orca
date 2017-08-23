@@ -1,4 +1,4 @@
-FROM bcgsc/orca-3
+FROM bcgsc/orca-3:2017.08.23
 RUN brew install m4 \
 macse \
 mafft \
