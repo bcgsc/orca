@@ -26,7 +26,7 @@ RUN brew install pkg-config
 # RUN brew install plink2
 RUN brew install poa
 # RUN brew install populations
-# RUN brew install poretools
+RUN brew install poretools
 RUN brew install prodigal
 RUN brew install prokka
 RUN brew install proteinortho
