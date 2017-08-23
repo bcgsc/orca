@@ -11,7 +11,7 @@ afra \
 #allpaths-lg \ old, used discovardenovo
 amos \
 andi \
-# RUN brew install anvio
+anvio \
 arcs \
 art \
 artemis \
