@@ -2,7 +2,7 @@ FROM linuxbrew/linuxbrew
 LABEL maintainer="tatyana.mozgacheva@gmail.com"
 #https://github.com/bcgsc/orca/issues/2
 ENV PERL5LIB /home/linuxbrew/perl5/lib/perl5
-RUN brew install -s perl 
+RUN brew install perl 
 RUN brew install cpanm gcc zlib expat berkeley-db mysql
 
 RUN brew install ruby
