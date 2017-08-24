@@ -66,6 +66,6 @@ velvetoptimiser \
 viennarna \
 vsearch \
 vt 
-RUN brew install weblogo
-RUN brew install wiggletools
+RUN brew install weblogo \
+wiggletools
 RUN brew install yaha
