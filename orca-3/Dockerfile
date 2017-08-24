@@ -16,7 +16,7 @@ clustal-w \
 cmake \
 cutadapt \
 curl \
-cufflinks \
+# cufflinks \ add later, brew linkage fails
 # RUN brew install corset
 cytoscape
 RUN brew install daligner \
