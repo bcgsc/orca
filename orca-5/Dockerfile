@@ -39,7 +39,7 @@ RUN brew install quorum
 # RUN brew install r8s
 RUN brew install racon 
 RUN brew install rampart \
-# rapsearch2 \
+# rapsearch2 \ add later, brew linkage fails
 raxml \
 ray \
 rcorrector \
