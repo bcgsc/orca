@@ -54,8 +54,8 @@ trimmomatic \
 trinity \
 trnascan 
 #RUN brew install ucsc-genome-browser
-RUN brew install unicycler
-RUN brew install uproc
+RUN brew install unicycler \
+uproc
 RUN brew install vague \
 varscan \
 vcake \
@@ -67,5 +67,5 @@ viennarna \
 vsearch \
 vt 
 RUN brew install weblogo \
-wiggletools
-RUN brew install yaha
+wiggletools \
+yaha
