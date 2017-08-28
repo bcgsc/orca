@@ -7,4 +7,6 @@ if brew test $(brew list) --cc=gcc-4.8 |& grep -q ': failed'; then
   exit 1
 else
   brew tests
+  # The jdk is hard to fix
+  brew linkage --test $(brew list | egrep -v '^jdk$')
 fi
