@@ -7,8 +7,8 @@
 # 1) Run the Docker container using `docker run -ti ID_IMAGE` 
 #    in the test server docker2 OR
 #    Run a script /usr/local/bin/orca in the orca1 server; 
-# 2) Inside the Docker containers of old and new ORCAs, type `brew list --versions`;
-# 3) Copy the outputs above in the list_old_orca.txt and list_new_orca.txt files, respectively;
+# 2) Inside the Docker containers of old and new ORCAs, type `brew list --versions` and `pip freeze`;
+# 3) Copy the outputs above in the list_old_orca.txt and list_new_orca.txt files, respectively and replace `==` to ` `;
 # 4) Put these files inside a folder with that script;
 # 5) Run the following script:
 
@@ -32,6 +32,12 @@ new_orca$formula <- gsub("@", "-", new_orca$formula)
 old_orca$previous <- gsub("_*","",old_orca$previous)
 new_orca$latest <- gsub("_*","",new_orca$latest)
 
+write.table(new_orca, file='list_new_orca.tsv', quote=FALSE, sep='\t', col.names = NA, )
+
+
+readr::write_tsv(new_orca, "versions.tsv")
+write_tsv(new_orca, "list_new_orca.tsv", row.names=FALSE)
+
 full_join <- full_join(old_orca, new_orca, by = "formula")
 full_join$status <- NA
 full_join$status[is.na(full_join$previous)] <- 'Added'
@@ -39,10 +45,10 @@ full_join$status[is.na(full_join$latest)] <- 'Removed'
 full_join$status[full_join$previous != full_join$latest] <- 'Updated'
 full_join[is.na(full_join)] <- " "
 
-full_join <- rename(full_join, c("formula" = "Formula"))
-full_join <- rename(full_join, c("previous" = "Previous"))
-full_join <- rename(full_join, c("latest" = "Latest"))
-full_join <- rename(full_join, c("status" = "Status"))
+full_join <- plyr::rename(full_join, c("formula" = "Formula"))
+full_join <- plyr::rename(full_join, c("previous" = "Previous"))
+full_join <- plyr::rename(full_join, c("latest" = "Latest"))
+full_join <- plyr::rename(full_join, c("status" = "Status"))
 
 #full_join <- full_join[full_join$previous != full_join$latest,]
 
@@ -50,7 +56,7 @@ full_join <- rename(full_join, c("status" = "Status"))
 full_join <- arrange(full_join,full_join$Formula)
 
 # Export to TSV file
-write.table(full_join, file='table_ORCA.tsv', quote=FALSE, sep='\t', col.names = NA)
+write.table(full_join, file='table_ORCA.tsv', quote=FALSE, sep='\t')
 
 # Color "Added" to green, "Removed" to red
 full_join <- datatable(full_join, rownames = FALSE) %>%
