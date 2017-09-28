@@ -33,8 +33,8 @@ RUN brew install e-mem \
 edirect \
 emacs \
 # RUN brew install ensembl-tools no formulae
-exonerate \
-express
+exonerate 
+# express
 
 RUN brew install fasta \
 fastml \
@@ -71,7 +71,8 @@ RUN brew install glimmerhmm
 RUN brew install gmap-gsnap
 RUN brew install gnuplot # broke by mummer
 RUN brew install grabix
-RUN brew install graphlan
+RUN brew install graphlan \
+graphviz
 RUN brew install gsl
 # RUN brew install gubbins
 RUN brew install harfbuzz
@@ -117,6 +118,7 @@ libtool \
 lighter \
 links-scaffolder \
 # lobstr \ fix test later
+lrsim \
 lsd \
 lua \
 lumpy-sv
