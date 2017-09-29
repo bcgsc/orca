@@ -1,4 +1,4 @@
-FROM bcgsc/orca-5:2017.08.23
+FROM bcgsc/orca-5:2017.09.26
 RUN brew install sailfish \
 salmon \
 sambamba \
@@ -64,6 +64,7 @@ vcftools \
 velvet \
 velvetoptimiser \
 viennarna \
+vim \
 vsearch \
 vt 
 RUN brew install weblogo \
