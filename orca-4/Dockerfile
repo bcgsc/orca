@@ -31,7 +31,8 @@ multi-worm-tracker \
 mummer \ 
 muscle 
 # musket no formulae 
-RUN brew install nanopolish \
+RUN brew install nano \
+nanopolish \
 # RUN brew install ncbi-c++-toolkit
 ncl \
 newick-utils \
