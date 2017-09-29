@@ -1,16 +1,19 @@
-FROM bcgsc/orca-3:2017.08.23
+FROM bcgsc/orca-3:2017.09.26
 RUN brew install m4 \
 macse \
 mafft \
 makedepend 
 RUN brew install maker \ 
+makefile2graph \
+man-db \
 mapsembler2 \
 maq \
 mash \
 # RUN brew install masurca orca, new version, https://github.com/Homebrew/homebrew-science/pull/5772
 mcl \
 megahit \ 
-meme 
+meme \
+methpipe
 # meraculous \ orca
 # RUN brew install metaphlan orca, installed by humann2
 RUN brew install mhap \
