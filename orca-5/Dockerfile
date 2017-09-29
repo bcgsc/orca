@@ -1,4 +1,4 @@
-FROM bcgsc/orca-4:2017.08.23
+FROM bcgsc/orca-4:2017.09.26
 RUN brew install paml
 RUN brew install pandaseq
 RUN brew install parallel
@@ -54,4 +54,5 @@ repeatscout \
 rmblast \
 rna-star \
 rnammer \
-ropebwt2
+ropebwt2 \
+rstudio-server
