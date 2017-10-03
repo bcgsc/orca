@@ -47,4 +47,5 @@ RUN cpanm -i Clone Apache::DBI
 #for icu4c,
 RUN sudo apt-get install wamerican
 
-RUN brew install miller
+RUN brew install miller \
+gcc@4.9 #for test
