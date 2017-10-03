@@ -37,8 +37,8 @@ ssake \
 stacks \
 stringtie \
 szip \
-swarm
-RUN brew install tagdust \ 
+swarm \
+tagdust \ 
 tasr \
 tbb \
 tbl2asn \
@@ -52,11 +52,11 @@ trimadap \
 trimal \
 trimmomatic \
 trinity \
-trnascan 
+trnascan \
 #RUN brew install ucsc-genome-browser
-RUN brew install unicycler \
-uproc
-RUN brew install vague \
+unicycler \
+uproc \
+vague \
 varscan \
 vcake \
 vcflib \
@@ -66,7 +66,7 @@ velvetoptimiser \
 viennarna \
 vim \
 vsearch \
-vt 
-RUN brew install weblogo \
+vt \
+weblogo \
 wiggletools \
 yaha
