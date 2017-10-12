@@ -1,4 +1,4 @@
-FROM bcgsc/orca-6:2017.08.23
+FROM bcgsc/orca-6:2017.10.12
 LABEL maintainer="Tatyana Mozgacheva tmozgacheva@bcgsc.ca" \
       org.label-schema.description="Genomics Research Container Architecture" \
       org.label-schema.url="http://www.bcgsc.ca/services/orca" \
