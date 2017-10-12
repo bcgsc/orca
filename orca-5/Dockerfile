@@ -1,4 +1,4 @@
-FROM bcgsc/orca-4:2017.09.26
+FROM bcgsc/orca-4:2017.10.12
 RUN brew install paml
 RUN brew install pandaseq
 RUN brew install parallel
