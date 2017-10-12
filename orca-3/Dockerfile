@@ -86,19 +86,18 @@ RUN brew install hmmer2
 RUN brew install htsbox
 RUN brew install htslib
 RUN brew install humann2
-RUN brew install icu4c
-RUN brew install idba
-RUN brew install igv
-RUN brew install igvtools
-RUN brew install impute2
-RUN brew install infernal
-RUN brew install iqtree
-RUN brew install iva
-RUN brew install jellyfish-1.1
-RUN brew install jellyfish
-RUN brew install jpeg
-
-
+RUN brew install icu4c \
+idba \
+igv \
+igvtools \
+impute2 \
+infernal \
+iqtree \
+iva
+RUN brew install jellyfish-1.1 \
+jellyfish \
+jpeg \
+jupyter
 
 RUN brew install kaiju \
 kallisto \
