@@ -1,4 +1,4 @@
-FROM bcgsc/orca-5:2017.09.26
+FROM bcgsc/orca-5:2017.10.12
 RUN brew install sailfish \
 salmon \
 sambamba \
