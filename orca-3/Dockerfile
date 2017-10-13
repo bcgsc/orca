@@ -101,8 +101,8 @@ jupyter
 
 RUN brew install kaiju \
 kallisto \
-kat \
-kent-tools \
+kat \ 
+# kent-tools \ fix  later
 kmacs \
 kmc \
 kmergenie \
