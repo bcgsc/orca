@@ -1,0 +1,6 @@
+FILES_LOCATION=/orca_repo/etc
+
+PROJECT=hackseq17_6
+
+
+docker run -t --name $PROJECT -m 100GB --memory-reservation 20GB -v $FILES_LOCATION/hosts:/etc/hosts:ro -v /projects/hackathon/2017:/home/projects -v $FILES_LOCATION/passwd_hs17:/etc/passwd:ro -v $FILES_LOCATION/group_hs17:/etc/group:ro -w /home/projects/$PROJECT -v /home/userhome:/home/userhome -v /tmp/.X11-unix:/tmp/.X11-unix --net host bcgsc/orca-hackseq:2017.10.12
