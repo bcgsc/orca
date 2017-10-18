@@ -20,4 +20,4 @@ else
         echo "You can remotely transfer data via rsync/scp to your /home/hackseq17/$USER directory"
         echo "Your Hackathon project folder is mounted under /$TEAM, please keep your raw data, scripts here"
    
-        exec docker exec -it  -u $(id -u):$(id -g) $(id -gn) /usr/bin/env XAUTHORITY=/home/hackseq17/$USER/.Xauthority DISPLAY=${DISPLAY} /bin/bash -l
+        exec docker exec -it  -u $(id -u):$(id -g) $(id -gn) /usr/bin/env XAUTHORITY=/home/userhome/$USER/.Xauthority DISPLAY=${DISPLAY} /bin/bash -l
