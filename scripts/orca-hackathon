@@ -15,9 +15,9 @@ else
         USER=$(id -un)
         TEAM=$(id -gn)
 
-        echo "Welcome to GSC ORCA Phase 2, USER $(id -un), Your home directory is mounted under /home/hackseq17/$USER"
+        echo "Welcome to Hackseq 2017, USER $(id -un), Your home directory is mounted under /home/userhome/$USER"
         echo "Currently installed tools can be found via 'brew list' and '/home/linuxbrew/.linuxbrew/bin' in shell"
-        echo "You can remotely transfer data via rsync/scp to your /home/hackseq17/$USER directory"
-        echo "Your Hackathon project folder is mounted under /$TEAM, please keep your raw data, scripts here"
+        echo "You can remotely transfer data via rsync/scp to your /home/userhome/$USER directory"
+        echo "Your Hackathon project folder is mounted under /home/projects/$TEAM, please keep your raw data, scripts here"
    
         exec docker exec -it  -u $(id -u):$(id -g) $(id -gn) /usr/bin/env XAUTHORITY=/home/userhome/$USER/.Xauthority DISPLAY=${DISPLAY} /bin/bash -l
