@@ -3,37 +3,55 @@
 ORCA is a platform for bioinformatics analysis. It is suited for those wishing to conduct self-serve analysis using their own existing data or provides a comprehensive bioinformatics environment for education or research, making results reproducible.
 
 ORCA provides access to a menu of validated bioinformatics software and the power to use these inside a secure and private containerized environment. These private containers are backed by larger mounted storage volumes and dedicated compute nodes to ensure sufficient resources for the demanding needs of bioinformatics analysis.
-Hundreds of bioinformatics tools from Homebrew-Science are installed in the ORCA Docker image using [Linuxbrew](http://linuxbrew.sh/), the package manager for Linux. ORCA is based on version 16.04 of Ubuntu Image.
+ORCA is available as a Docker image that includes hundreds of preinstalled software packages by [Linuxbrew](http://linuxbrew.sh/), the package manager for Linux. ORCA is based on version 16.04 of Ubuntu Image.
 
-It’s under the MIT license using the Docker , an open-source platform that 
-packages up an application with all of the minimal dependencies it needs.
+ORCA itself is available under the MIT license. The software tools that it includes are licensed under various open source licenses.
+
+
+
+
 
 
 ## How to install Docker:
 
 [On Mac](https://docs.docker.com/docker-for-mac/install/)
 
-[On Linux](https://docs.docker.com/engine/installation/#cloud)
+[On Linux](https://docs.docker.com/engine/installation/)
 
-[On Windows](https://docs.docker.com/docker-for-windows/install/#download-docker-for-windows)
+[On Windows](https://docs.docker.com/docker-for-windows/install/)
 
-Use the following commands in the terminal to check whether you have the Docker:
+Use the following commands in the terminal to check whether you have the Docker installed:
 ```
 docker --version
+
 docker --help
 ```
 ## How to install ORCA
 Use the following commands in the terminal to download and run ORCA image:
 
 ```
-docker pull bcgsc/orca:2017.08.23
-docker exec -it bcgsc/orca:2017.08.23 /bin/bash
+docker pull bcgsc/orca
+
+docker run -it bcgsc/orca
+```
+
+In order to to mount a local home directory or any files inside the ORCA container, use the -v flag.
+
+```
+docker run -it -v $HOME -w $HOME bcgsc/orca
 ```
 
 ## Installing software in ORCA
-[Linuxbrew](http://linuxbrew.sh/) was integrated with ORCA for easy distribution of software.
+[Linuxbrew](http://linuxbrew.sh/) is integrated with ORCA for easy installation of software.
 For the installation of software through [Linuxbrew](http://linuxbrew.sh/), use the command below in the terminal:
 
 ```
-brew install homebrew/science/<software>
+brew install zsh
 ```
+For more information about software available from Linuxbrew, please visit the [following webpage](http://formulae.brew.sh).
+
+Linuxbrew creates and uses the below useful paths in the following ways:
+
+* `/home/linuxbrew/.linuxbrew/bin` includes the executables and scripts in the `PATH`;
+* `/home/linuxbrew/.linuxbrew/opt` includes symlinks to the most recent version of each software package;
+* `/home/linuxbrew/.linuxbrew/Cellar` includes all versions of the installed software packages.
