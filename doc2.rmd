@@ -1,0 +1,39 @@
+# ORCA
+
+ORCA is a platform for bioinformatics analysis. It is suited for those wishing to conduct self-serve analysis using their own existing data or provides a comprehensive bioinformatics environment for education or research, making results reproducible.
+
+ORCA provides access to a menu of validated bioinformatics software and the power to use these inside a secure and private containerized environment. These private containers are backed by larger mounted storage volumes and dedicated compute nodes to ensure sufficient resources for the demanding needs of bioinformatics analysis.
+Hundreds of bioinformatics tools from Homebrew-Science are installed in the ORCA Docker image using [Linuxbrew](http://linuxbrew.sh/), the package manager for Linux. ORCA is based on version 16.04 of Ubuntu Image.
+
+It’s under the MIT license using the Docker , an open-source platform that 
+packages up an application with all of the minimal dependencies it needs.
+
+
+## How to install Docker:
+
+[On Mac](https://docs.docker.com/docker-for-mac/install/)
+
+[On Linux](https://docs.docker.com/engine/installation/#cloud)
+
+[On Windows](https://docs.docker.com/docker-for-windows/install/#download-docker-for-windows)
+
+Use the following commands in the terminal to check whether you have the Docker:
+```
+docker --version
+docker --help
+```
+## How to install ORCA
+Use the following commands in the terminal to download and run ORCA image:
+
+```
+docker pull bcgsc/orca:2017.08.23
+docker exec -it bcgsc/orca:2017.08.23 /bin/bash
+```
+
+## Installing software in ORCA
+[Linuxbrew](http://linuxbrew.sh/) was integrated with ORCA for easy distribution of software.
+For the installation of software through [Linuxbrew](http://linuxbrew.sh/), use the command below in the terminal:
+
+```
+brew install homebrew/science/<software>
+```
