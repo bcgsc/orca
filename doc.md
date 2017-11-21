@@ -51,12 +51,12 @@ Use [the script `hackseq.cr.containers`](https://github.com/bcgsc/orca/blob/mast
 
 `--name $PROJECT`: a name of the container is a name of the team 
 
-`-m 100GB`: The maximum amount of memory that a container can use.
-`--memory-reservation 20GB`: a soft limit, which is activated when Docker detects low memory or contention on the host machine. A server has 128 GB RAM / 5 teams = ~20 GB.
+`-m 100GB`: The maximum amount of memory that a container can use
+`--memory-reservation 20GB`: a soft limit, which is activated when Docker detects low memory or contention on the host machine. A server has 128 GB RAM / 5 teams = ~20 GB
 
-`-v $FILES_LOCATION/hosts:/etc/hosts:ro`: a flag `–h` doesn’t work with a `--net host`, so, have to mount hosts file.
+`-v $FILES_LOCATION/hosts:/etc/hosts:ro`: a flag `–h` doesn’t work with a `--net host`, so, have to mount hosts file
 
-`-v /projects/hackathon/2017:/home/projects`: mounts all project directories 
+`-v /projects/hackathon/2017:/home/projects`: mounts all project directories P.S. This broke `scp`. It would be better to use `-v /projects/hackathon/2017` 
 
 `-v $FILES_LOCATION/passwd_hs17:/etc/passwd:ro -v $FILES_LOCATION/group_hs17:/etc/group:ro`: maps users of the container with users of the host machine
 
@@ -72,8 +72,8 @@ When a user logs in to the system [the script `orca-hackathon`](https://github.c
 ### Details:
 * The name of the container is the name of the primary group is `$(id -gn)`
 
-* `XAUTHORITY=/home/userhome/$USER/.Xauthority`: provides a path to user’s `.Xauthority` file, otherwise it takes root’ `.Xauthority` file, since the container was created by root.
-* `DISPLAY=${DISPLAY}`: provides a new `$DISPLAY` variable of the terminal.
+* `XAUTHORITY=/home/userhome/$USER/.Xauthority`: provides a path to user’s `.Xauthority` file, otherwise it takes root’ `.Xauthority` file, since the container was created by root
+* `DISPLAY=${DISPLAY}`: provides a new `$DISPLAY` variable of the terminal
 
 ## X11
 There is option to run GUI applications inside a Docker container like using SSH with X11 forwarding. 
