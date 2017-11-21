@@ -25,7 +25,7 @@ The project group (e.g. `hackseq17_1`) gives them write access to that project f
 * Secondary group name is `1000(orca_users)`
 * User home directory: 
     1) create empty `.Xauthority file` (X11)  
-    2) `brew` requires write permissions to the user's `~/.cache/Homebrew` directory.To make `brew install` work:
+    2) `brew` requires write permissions to the user's `~/.cache/Homebrew` directory. To make `brew install` work:
     ```sh
     mkdir -p -m775 ~/.cache/Homebrew 
     ```
@@ -45,7 +45,7 @@ alias brew='sudo -u linuxbrew HOMEBREW_NO_AUTO_UPDATE=1 /home/linuxbrew/.linuxbr
 ```
 ## Containers creation
 
-Use [the following script](https://github.com/bcgsc/orca/blob/master/scripts/hackseq.cr.containers) to create a container for each team. Set `PROJECT` variable for each team and run the Docker command:
+Use [the script `hackseq.cr.containers`](https://github.com/bcgsc/orca/blob/master/scripts/hackseq.cr.containers) to create a container for each team. Set `PROJECT` variable for each team and run the Docker command:
 
 ### Details:
 
@@ -67,9 +67,7 @@ Use [the following script](https://github.com/bcgsc/orca/blob/master/scripts/hac
 `/tmp/.X11-unix:/tmp/.X11-unix --net host`: for running GUI application (X11)
 
 ## Log in
-When a user logs in to the system [the following script](https://github.com/bcgsc/orca/blob/master/scripts/orca-hackathon) (`/usr/local/bin/orca.hackathon`) runs:
-
-
+When a user logs in to the system [the script `orca-hackathon`](https://github.com/bcgsc/orca/blob/master/scripts/orca-hackathon) (`/usr/local/bin/orca.hackathon`) runs:
 
 ### Details:
 * The name of the container is the name of the primary group is `$(id -gn)`
