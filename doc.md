@@ -66,6 +66,12 @@ Use [the script `hackseq.cr.containers`](https://github.com/bcgsc/orca/blob/mast
 
 `/tmp/.X11-unix:/tmp/.X11-unix --net host`: for running GUI application (X11)
 
+P.S. If there is no a swarm on the server, you shouldn’t use `-H :4000`, otherwise you get the following error:
+
+```
+docker: Cannot connect to the Docker daemon. Is the docker daemon running on this host?.
+```
+
 ## Log in
 When a user logs in to the system [the script `orca-hackathon`](https://github.com/bcgsc/orca/blob/master/scripts/orca-hackathon) (`/usr/local/bin/orca.hackathon`) runs:
 
