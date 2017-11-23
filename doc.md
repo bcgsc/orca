@@ -36,6 +36,8 @@ alias brew='sudo -u linuxbrew HOMEBREW_NO_AUTO_UPDATE=1 /home/linuxbrew/.linuxbr
 ```
 * Add new entries from outputs of `getent passwd` and `getent group` commands to `group_hs17` and `passwd_hs17` files in `/orca_repo/etc`.
 
+P.S. Don’t use `vim` editor, use `nano`, because `vim` changes the inode and bind-mounted single files don't stay in sync after inode of file changes. As result, the container doesn’t see changes.
+
 * Add `hosts` file to the `/orca_repo/etc`:
 ```
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
