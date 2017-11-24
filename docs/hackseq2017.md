@@ -46,7 +46,7 @@ P.S. Don’t use `vim` editor, use `nano`, because `vim` changes the inode and b
 10.9.235.202 orca02 orca02.dmz.bcgsc.ca
 ```
 ## Image creation
-Manually build the image using the [Dockerfile](https://github.com/bcgsc/orca/blob/master/scripts/Dockerfile). That local Dockerfile fixes a problem with writing access to the linuxbrew folder.
+Manually build the image using the [Dockerfile](https://github.com/bcgsc/orca/blob/master/orca-micb405/Dockerfile). That local Dockerfile fixes a problem with writing access to the linuxbrew folder.
 Only the `linuxbrew` user has right to edit the folder, not `linuxbrew` group! Thus, users from `orca_users` group must run commands under `linuxbrew` user.
 
 ```sh
