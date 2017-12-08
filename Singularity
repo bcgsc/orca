@@ -17,7 +17,6 @@ export PERL5LIB
 
 PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH
 export PATH
-
 echo 'PERL5LIB='$PERL5LIB > /etc/environment
 echo 'PATH='$PATH >> /etc/environment
 
