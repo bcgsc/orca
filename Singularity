@@ -61,6 +61,7 @@ su -c 'brew install homebrew/science/matplotlib' linuxbrew
 su -c 'brew install scipy' linuxbrew
 
 su -c 'brew install R' linuxbrew
+
 sudo apt-get install zip -y
 
 su -c 'brew install unzip' linuxbrew
