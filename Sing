@@ -13,7 +13,8 @@ echo 'PERL5LIB='$PERL5LIB > /etc/environment
 echo 'PATH='$PATH >> /etc/environment
 
 su -c 'brew install perl -v' linuxbrew
-su -c 'brew install cpanm gcc gcc@4.9 zlib expat berkeley-db mysql -v' linuxbrew
+su -c 'brew install cpanm gcc gcc@4.9 zlib expat berkeley-db -v' linuxbrew
+su -c 'brew install mysql' linuxbrew
 su -c 'brew install ruby' linuxbrew
 su -c 'gem install gnuplot RubyInline terminal-table narray' linuxbrew
 
@@ -30,7 +31,6 @@ su -c 'cpanm Bio::Perl' linuxbrew
 # for pip and setuptools
 su -c 'brew install python' linuxbrew
 
-su -c 'ln -s python2 /home/linuxbrew/.linuxbrew/bin/python' linuxbrew
 ln -s python2 /home/linuxbrew/.linuxbrew/bin/python
 
 su -c 'brew install homebrew/science/bedops' linuxbrew
