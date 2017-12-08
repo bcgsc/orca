@@ -1,6 +1,16 @@
 Bootstrap: docker
 From: linuxbrew/linuxbrew
 
+%labels
+MAINTAINER Tatyana Mozgacheva
+
+%environment
+PERL5LIB=/home/linuxbrew/perl5/lib/perl5
+export PERL5LIB
+
+PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH
+export PATH
+
 %post
 
 PERL5LIB=/home/linuxbrew/perl5/lib/perl5
@@ -68,10 +78,3 @@ sudo apt-get install wamerican
 
 #for gcc-4.9 for testing script
 su -c 'brew install miller' linuxbrew
-
-su -c 'brew install a5 abacas abyss-explorer abyss ace-corrector adam adapterremoval afra amos andi anvio arcs art artemis astral autoconf automake atram' linuxbrew
-
-su -c 'brew install bam-readcount bam2wig bamhash bamm bamtools bamutil barrnap bbtools bcalm bcftools beagle beast beast2 bedops bedtools beetl bfc bioawk biobloomtools biomake bison blat bless bowtie bowtie2 breseq busco bwa' linuxbrew
-
-
-chmod -R 777 /home/linuxbrew/.linuxbrew
