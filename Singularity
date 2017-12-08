@@ -30,6 +30,7 @@ su -c 'cpanm -i IO::All || true' linuxbrew
 cd /home/linuxbrew/.cpanm/work/
 cd $(ls)
 cat build.log
+false
 su -c 'cpanm -i forks::shared Want Bit::Vector DBD::SQLite DBI File::Which IO::Prompt Inline::C PerlIO::gzip XML::Simple' linuxbrew
 
 su -c 'cpanm -i Module::Build Class::Inspector SOAP::Lite SVG Term::ReadKey Time::HiRes XML::Parser Carp::Clan HTML::Parser LWP URI Inline Inline::C Parse::RecDescent version' linuxbrew
