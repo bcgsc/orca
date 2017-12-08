@@ -71,7 +71,6 @@ sudo apt-get install zip -y
 su -c 'brew install unzip' linuxbrew
 
 su -c 'brew tap homebrew/science' linuxbrew
-
 su -c 'cpanm -i HTML::Entities LWP::Simple LWP::Protocol::https  Statistics::Descriptive Moo' linuxbrew
 
 #for bowtie
