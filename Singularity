@@ -1,7 +1,6 @@
 Bootstrap: docker
 From: linuxbrew/linuxbrew
 
-
 %labels
 MAINTAINER Tatyana Mozgacheva
 
