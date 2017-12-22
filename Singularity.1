@@ -26,11 +26,7 @@ su -c 'brew install ruby' linuxbrew
 su -c 'gem install gnuplot RubyInline terminal-table narray' linuxbrew
 
 su -c 'cpanm -i List::MoreUtils::XS DBD::mysql DB_File forks Perl::Unsafe::Signals Bio::Root::Version' linuxbrew 
-su -c 'cpanm -i IO::All || true' linuxbrew 
-cd /home/linuxbrew/.cpanm/work/
-cd $(ls -t)
-cat build.log
-false
+su -c 'cpanm -i IO::All' linuxbrew 
 
 su -c 'cpanm -i forks::shared Want Bit::Vector DBD::SQLite DBI File::Which IO::Prompt Inline::C PerlIO::gzip XML::Simple' linuxbrew
 
