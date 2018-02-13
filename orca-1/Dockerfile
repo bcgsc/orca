@@ -29,7 +29,7 @@ RUN pip2 install cwlref-runner
 
 RUN brew install tcsh
 
-RUN brew install homebrew/science/matplotlib
+RUN brew install brewsci/science/matplotlib
 RUN brew install scipy
 
 RUN brew install R
@@ -37,7 +37,8 @@ RUN brew install R
 RUN sudo apt-get install zip -y
 RUN brew install unzip
 
-RUN brew tap homebrew/science
+RUN brew tap brewsci/bio
+RUN brew tap brewsci/science
 
 RUN cpanm -i HTML::Entities LWP::Simple LWP::Protocol::https Statistics::Descriptive Moo
 
