@@ -1,0 +1,4 @@
+*.tsv
+*.html
+!docs/
+!versions.tsv
