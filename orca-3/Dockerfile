@@ -1,5 +1,8 @@
 FROM bcgsc/orca-2:2017.10.12
 
+# Install wamerican for icu4c
+RUN sudo apt-get install wamerican
+
 RUN brew install canu \
 cap3 \
 cd-hit \
