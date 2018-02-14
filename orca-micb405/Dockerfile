@@ -1,7 +1,7 @@
 # The local Dockerfile, that fixes a problem with writing access to the linuxbrew folder.
 # Only the `linuxbrew` user has right to edit the folder, not `linuxbrew` group!
 
-FROM bcgsc/orca:latest
+FROM bcgsc/orca:2017.10.12
 # Solution 1:
 # The Dockerfile bug: chmod increases the size of image, twice!
 # RUN chmod -R g+w /home/linuxbrew/.linuxbrew  >/dev/null
