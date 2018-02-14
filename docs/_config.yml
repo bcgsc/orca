@@ -1,3 +1,5 @@
 theme: jekyll-theme-dinky
 title: ORCA
-description: ORCA provides access to a menu of validated bioinformatics software and the power to use these inside a secure and private containerized environment. ORCA is derived from Ubuntu Ubuntu 16.04 LTS (Xenial Xerus).
+description: A Comprehensive Bioinformatics Container Environment for Education and Research
+show_downloads: false
+google_analytics: "UA-2437900-4"
