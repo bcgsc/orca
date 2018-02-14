@@ -1,14 +1,14 @@
-FROM bcgsc/orca-1:2017.10.12
-RUN brew install \ 
+FROM bcgsc/orca-1:2018.02.14
+RUN brew install jdk
+RUN brew install \
 a5 \
 abacas \
-abyss-explorer \
 abyss \
+abyss-explorer \
 ace-corrector \
 adam \
 adapterremoval \
 afra \
-#allpaths-lg \ old, used discovardenovo
 amos \
 andi \
 anvio \
@@ -16,12 +16,9 @@ arcs \
 art \
 artemis \
 astral \
-autoconf \
-automake \
-atram 
-RUN brew install augustus
-
-RUN brew install bam-readcount \
+atram \
+augustus \
+bam-readcount \
 bam2wig \
 bamhash \
 bamm \
@@ -40,17 +37,14 @@ beetl \
 bfc \
 bioawk \
 biobloomtools \
-# biointerchange \ get rid of it because the license and linkage problem
 biomake \
 bison \
-# biopieces \ for future, export variables
-# blasr \ fix test later
 blast \
 blat \
 bless \
 bowtie \
 bowtie2 \
-#bpipe \
+bpipe \
 breseq \
 busco \
-bwa 
+bwa
