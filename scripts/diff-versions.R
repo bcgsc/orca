@@ -16,14 +16,10 @@ library(readr)
 old_orca <- read_tsv("versions.previous.tsv", col_types = "cc")
 new_orca <- read_tsv("versions.current.tsv", col_types = "cc")
 
-# Change @ to -. Remove the Brew revision number.
-old_orca <- old_orca %>% mutate(
-		Formula = sub("_", "", sub("@", "-", Formula)),
-		Version = sub("_", "", Version)) %>%
+# Remove the Brew revision number.
+old_orca <- old_orca %>% mutate(Version = sub("_.*", "", Version)) %>%
 	arrange(Formula) %>% distinct()
-new_orca <- new_orca %>% mutate(
-		Formula = sub("@", "-", Formula),
-		Version = sub("_", "", Version)) %>%
+new_orca <- new_orca %>% mutate(Version = sub("_.*", "", Version)) %>%
 	arrange(Formula) %>% distinct()
 write_tsv(new_orca, "versions.tsv")
 
