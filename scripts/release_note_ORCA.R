@@ -1,70 +1,46 @@
-# Date: 22/06/2017
-# Author: Tatyana Mozgacheva tmozgacheva@bcgsc.ca
-# Description: This script generates a table of added 
+# Written by Shaun Jackman @sjackman
+# and Tatyana Mozgacheva <tmozgacheva@bcgsc.ca>
+# Description: This script generates a table of added
 # and removed software, and their versions in the new release of ORCA
-# in HTML and TSV format (table_ORCA.html and table_ORCA.tsv).
-# Procedure:
-# 1) Run the Docker container using `docker run -ti ID_IMAGE` 
-#    in the test server docker2 OR
-#    Run a script /usr/local/bin/orca in the orca1 server; 
-# 2) Inside the Docker containers of old and new ORCAs, type `brew list --versions` and `pip freeze`;
-# 3) Copy the outputs above in the list_old_orca.txt and list_new_orca.txt files, respectively and replace `==` to ` `;
-# 4) Put these files inside a folder with that script;
-# 5) Run the following script:
+# in HTML and TSV format (versions.diff.html and versions.diff.tsv).
+# Usage:
+# 1. Run the Docker container using `docker run -it bcgsc/orca`
+# 2. Inside the Docker containers of old and new ORCAs, type `brew list --versions` and `pip freeze`
+# 3. Replace ` ` and `==` with `\t`
 
-install.packages("tidyverse")
-install.packages("knitr")
-install.packages("DT")
-install.packages("plyr")
-library(plyr)
-library(tidyverse)
-library(knitr)
 library(DT)
+library(dplyr)
+library(readr)
 
-old_orca <- read_delim("list_old_orca.txt", " ", col_names = c("formula","previous"))
-new_orca <- read_delim("list_new_orca.txt", " ", col_names = c("formula","latest"))
+# Read the previous and current versions from TSV and text files.
+old_orca <- read_tsv("versions.previous.tsv", col_types = "cc")
+new_orca <- read_tsv("versions.current.tsv", col_types = "cc")
 
-#By new rules, a formulae with old version contains @ instead of -. Example: samtools@0.1
-old_orca$formula <- gsub("@", "-", old_orca$formula)
-new_orca$formula <- gsub("@", "-", new_orca$formula)
+# Change @ to -. Remove the Brew revision number.
+old_orca <- old_orca %>% mutate(
+		Formula = sub("_", "", sub("@", "-", Formula)),
+		Version = sub("_", "", Version)) %>%
+	arrange(Formula) %>% distinct()
+new_orca <- new_orca %>% mutate(
+		Formula = sub("@", "-", Formula),
+		Version = sub("_", "", Version)) %>%
+	arrange(Formula) %>% distinct()
+write_tsv(new_orca, "versions.tsv")
 
-#Don't care about a minor version of the formulae. 1.2 is equal to 1.2_3 for user.
-old_orca$previous <- gsub("_*","",old_orca$previous)
-new_orca$latest <- gsub("_*","",new_orca$latest)
-
-write.table(new_orca, file='list_new_orca.tsv', quote=FALSE, sep='\t', col.names = NA, )
-
-
-readr::write_tsv(new_orca, "versions.tsv")
-write_tsv(new_orca, "list_new_orca.tsv", row.names=FALSE)
-
-full_join <- full_join(old_orca, new_orca, by = "formula")
-full_join$status <- NA
-full_join$status[is.na(full_join$previous)] <- 'Added'
-full_join$status[is.na(full_join$latest)] <- 'Removed'
-full_join$status[full_join$previous != full_join$latest] <- 'Updated'
-full_join[is.na(full_join)] <- " "
-
-full_join <- plyr::rename(full_join, c("formula" = "Formula"))
-full_join <- plyr::rename(full_join, c("previous" = "Previous"))
-full_join <- plyr::rename(full_join, c("latest" = "Latest"))
-full_join <- plyr::rename(full_join, c("status" = "Status"))
-
-#full_join <- full_join[full_join$previous != full_join$latest,]
-
-# Sort
-full_join <- arrange(full_join,full_join$Formula)
+# Determine which formula have changed.
+versions_diff <- full_join(old_orca, new_orca, by = "Formula") %>%
+	rename(Previous = Version.x, Current = Version.y) %>%
+	mutate(Status =
+		ifelse(is.na(Previous), "Added",
+		ifelse(is.na(Current), "Removed",
+		ifelse(Previous != Current, "Updated",
+		NA))))
 
 # Export to TSV file
-write.table(full_join, file='table_ORCA.tsv', quote=FALSE, sep='\t')
-
-# Color "Added" to green, "Removed" to red
-full_join <- datatable(full_join, rownames = FALSE) %>%
-  formatStyle(columns = "Status", 
-              background = styleEqual(c("Added", "Removed"), c("green", "red"))) 
-
-
+write_tsv(versions_diff, "versions.diff.tsv")
 
 # Export to HTML file
-saveWidget(full_join, 'table_ORCA.html')
-
+datatable(versions_diff) %>%
+	formatStyle(columns = "Status",
+		background = styleEqual(c("Added", "Removed"), c("green", "red"))) %>%
+	saveWidget("versions.diff.html")
