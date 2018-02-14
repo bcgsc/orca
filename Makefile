@@ -14,4 +14,4 @@ versions.current.tsv:
 		| tr -s ' =' '\t\t') >$@
 
 versions.diff.html: versions.previous.tsv versions.current.tsv
-	Rscript scripts/release_note_ORCA.R
+	Rscript scripts/diff-versions.R
