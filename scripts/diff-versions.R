@@ -21,7 +21,6 @@ old_orca <- old_orca %>% mutate(Version = sub("_.*", "", Version)) %>%
 	arrange(Formula) %>% distinct()
 new_orca <- new_orca %>% mutate(Version = sub("_.*", "", Version)) %>%
 	arrange(Formula) %>% distinct()
-write_tsv(new_orca, "versions.tsv")
 
 # Determine which formula have changed.
 versions_diff <- full_join(old_orca, new_orca, by = "Formula") %>%
@@ -30,7 +29,8 @@ versions_diff <- full_join(old_orca, new_orca, by = "Formula") %>%
 		ifelse(is.na(Previous), "Added",
 		ifelse(is.na(Current), "Removed",
 		ifelse(Previous != Current, "Updated",
-		NA))))
+		NA)))) %>%
+	arrange(Formula)
 
 # Export to TSV file
 write_tsv(versions_diff, "versions.diff.tsv")
