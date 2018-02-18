@@ -43,7 +43,6 @@ blat \
 bless \
 bowtie \
 bowtie2 \
-bpipe \
 breseq \
 busco \
 bwa
