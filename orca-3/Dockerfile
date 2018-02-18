@@ -1,6 +1,7 @@
-FROM bcgsc/orca-2:2017.10.12
+FROM bcgsc/orca-2:2018.02.14
 
-RUN brew install canu \
+RUN brew install \
+canu \
 cap3 \
 cd-hit \
 cegma \
@@ -14,37 +15,31 @@ clonehd \
 clustal-omega \
 clustal-w \
 cmake \
-cutadapt \
 curl \
-# cufflinks \ add later, brew linkage fails
-# RUN brew install corset
-cytoscape
-RUN brew install daligner \
+cutadapt \
+cytoscape \
+daligner \
 dazz_db \
 delly \
 dextractor \
 diamond \
 dida \
 discovar \
-# discovardenovo error =(
 dsk \
-dwgsim
-RUN brew install e-mem \
+dwgsim \
+e-mem \
 edirect \
 emacs \
-# RUN brew install ensembl-tools no formulae
-exonerate 
-# express
-
-RUN brew install fasta \
+exonerate  \
+fasta \
 fastml \
 fastq-tools \
 fastqc \
 fasttree \
 fastuniq \
 fastx_toolkit \
-fermi-lite \
 fermi \
+fermi-lite \
 fermi2 \
 fermikit \
 flash \
@@ -53,70 +48,55 @@ fqzcomp \
 freebayes \
 freec \
 fsa \
-fwdpp
-
-RUN brew install gaemr
-# RUN brew install garli
-RUN brew install gatb
-RUN brew install gatk
-RUN brew install geneid
-RUN brew install genewise
-RUN brew install genometools
-
-#no such formulae
-# RUN brew install gfatools
-
-RUN brew install gingr
-RUN brew install glimmerhmm
-RUN brew install gmap-gsnap
-RUN brew install gnuplot # broke by mummer
-RUN brew install grabix
-RUN brew install graphlan \
-graphviz
-RUN brew install gsl
-# RUN brew install gubbins
-RUN brew install harfbuzz
-# RUN brew install harvest-tools
-RUN brew install hisat
-RUN brew install hisat2
-RUN brew install hlaminer
-RUN brew install hmmer
-RUN brew install hmmer2
-#RUN brew install htqc
-RUN brew install htsbox
-RUN brew install htslib
-RUN brew install humann2
-RUN brew install icu4c \
+fwdpp \
+gaemr \
+gatb \
+gatk \
+geneid \
+genewise \
+genometools \
+gingr \
+glimmerhmm \
+gmap-gsnap \
+grabix \
+graphlan \
+graphviz \
+gsl \
+harfbuzz \
+hisat \
+hisat2 \
+hlaminer \
+hmmer \
+hmmer2 \
+htsbox \
+htslib \
+humann2 \
 idba \
 igv \
 igvtools \
 impute2 \
 infernal \
 iqtree \
-iva
-RUN brew install jellyfish-1.1 \
+iva \
 jellyfish \
 jpeg \
-jupyter
-
-RUN brew install kaiju \
+jupyter \
+kaiju \
 kallisto \
-kat \ 
-# kent-tools \ fix  later
+kat \
 kmacs \
 kmc \
 kmergenie \
 kmerstream \
 kollector \
-kraken
-RUN brew install last \
+kraken \
+last \
 libbigwig \
 libpll \
 libsequence \
 libtool \
 lighter \
 links-scaffolder \
-# lobstr \ fix test later
 lrsim \
 lsd \
 lua \
