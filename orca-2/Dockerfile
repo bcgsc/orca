@@ -6,7 +6,6 @@ abacas \
 abyss \
 abyss-explorer \
 ace-corrector \
-adam \
 adapterremoval \
 afra \
 amos \
