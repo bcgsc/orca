@@ -1,39 +1,35 @@
-FROM bcgsc/orca-3:2017.10.12
-RUN brew install m4 \
+FROM bcgsc/orca-3:2018.02.14
+RUN brew install \
 macse \
 mafft \
-makedepend 
-RUN brew install maker \ 
+makedepend \
 makefile2graph \
+maker \
 man-db \
 mapsembler2 \
 maq \
 mash \
-# RUN brew install masurca orca, new version, https://github.com/Homebrew/homebrew-science/pull/5772
+masurca \
 mcl \
-megahit \ 
+megahit \
 meme \
-methpipe
-# meraculous \ orca
-# RUN brew install metaphlan orca, installed by humann2
-RUN brew install mhap \
+metaphlan \
+methpipe \
+mhap \
 minced \
 minia \
 miniasm \
 minimap \
 mir-prefer \
-# RUN brew install mira
 mitofy \
 mlst \
-mothur \ 
+mothur \
 mrbayes \
 multi-worm-tracker \
-mummer \ 
-muscle 
-# musket no formulae 
-RUN brew install nano \
+mummer \
+muscle \
+nano \
 nanopolish \
-# RUN brew install ncbi-c++-toolkit
 ncl \
 newick-utils \
 newicktools \
@@ -41,9 +37,7 @@ nextflow \
 nonpareil \
 novoalign \
 ntcard \
-nxtrim 
-RUN brew install oases
-# RUN brew install ogdraw
-RUN brew install oma
-
-RUN brew install orthofinder
+nxtrim \
+oases \
+oma \
+orthofinder
