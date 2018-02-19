@@ -50,7 +50,6 @@ fsa \
 fwdpp \
 gaemr \
 gatb \
-gatk \
 geneid \
 genewise \
 genometools \
