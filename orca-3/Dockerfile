@@ -78,7 +78,6 @@ iqtree \
 iva \
 jellyfish \
 jpeg \
-jupyter \
 kaiju \
 kallisto \
 kat \
