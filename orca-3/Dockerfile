@@ -1,9 +1,5 @@
 FROM bcgsc/orca-2:2018.02.14
 
-# adam and cytoscape require jdk@8.
-RUN brew unlink jdk && brew install jdk@8 && brew link --force jdk@8
-RUN brew install adam
-
 RUN brew install \
 canu \
 cap3 \
@@ -21,7 +17,6 @@ clustal-w \
 cmake \
 curl \
 cutadapt \
-cytoscape \
 daligner \
 dazz_db \
 delly \
