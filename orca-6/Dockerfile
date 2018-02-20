@@ -1,10 +1,11 @@
-FROM bcgsc/orca-5:2017.10.12
-RUN brew install sailfish \
+FROM bcgsc/orca-5:2018.02.14
+RUN brew install \
+sailfish \
 salmon \
 sambamba \
 samblaster \
-samtools@0.1 \
 samtools \
+samtools@0.1 \
 scarpa \
 sdsl-lite \
 seqan \
@@ -16,8 +17,6 @@ sickle \
 simulate-pcr \
 skewer \
 smalt \
-# RUN brew install smrtanalysis
-# snap-aligner \ may be exclude
 snap \
 snoscan \
 snp-sites \
@@ -26,25 +25,21 @@ soapdenovo \
 sortmerna \
 spaced \
 spades \
-# sparseassembler \ no formulae
 spici \
 sqlite \
 squeezambler \
 sratoolkit \
 ssake \
-# sspace \ no formulae
-# sspace-longread \ no formulae
 stacks \
 stringtie \
-szip \
 swarm \
-tagdust \ 
+szip \
+tagdust \
 tasr \
 tbb \
 tbl2asn \
 tophat \
-trans-abyss \ 
-#RUN brew install trans_proteomic_pipeline 
+trans-abyss \
 transdecoder \
 transrate-tools \
 trf \
@@ -53,7 +48,6 @@ trimal \
 trimmomatic \
 trinity \
 trnascan \
-#RUN brew install ucsc-genome-browser
 unicycler \
 uproc \
 vague \
