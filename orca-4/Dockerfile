@@ -41,7 +41,6 @@ lumpy-sv \
 macse \
 mafft \
 makedepend \
-makefile2graph \
 maker \
 man-db \
 mapsembler2 \
