@@ -9,7 +9,6 @@ man-db \
 mapsembler2 \
 maq \
 mash \
-masurca \
 mcl \
 megahit \
 meme \
