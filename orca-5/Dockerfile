@@ -64,23 +64,4 @@ poretools \
 prodigal \
 prokka \
 proteinortho \
-psmc \
-quast \
-quest \
-quorum \
-racon \
-rampart \
-raxml \
-ray \
-rcorrector \
-readline \
-readseq \
-readsim \
-recon \
-repeatmasker \
-repeatmodeler \
-repeatscout \
-rmblast \
-rna-star \
-rnammer \
-ropebwt2
+psmc

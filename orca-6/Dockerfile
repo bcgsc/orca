@@ -1,5 +1,24 @@
 FROM bcgsc/orca-5:2018.02.14
 RUN brew install \
+quast \
+quest \
+quorum \
+racon \
+rampart \
+raxml \
+ray \
+rcorrector \
+readline \
+readseq \
+readsim \
+recon \
+repeatmasker \
+repeatmodeler \
+repeatscout \
+rmblast \
+rna-star \
+rnammer \
+ropebwt2 \
 sailfish \
 salmon \
 sambamba \
