@@ -1,4 +1,5 @@
 FROM bcgsc/orca-4:2018.02.14
+RUN brew remove mafft
 RUN brew install \
 macse \
 mafft \
