@@ -1,5 +1,17 @@
 sut:
   build: .
-  dockerfile: Dockerfile.test
-  environment:
-    - HOMEBREW_DEVELOPER=1
+  command:
+    - /bin/sh
+    - -c
+    - |
+      set -eux
+      brew doctor
+      brew tests
+      failed=0
+      for i in $$(brew list | grep -vx jdk); do
+        brew linkage --test $$i || failed=1
+      done
+      for i in $$(brew list); do
+        brew test $$i || failed=1
+      done
+      exit $$failed
