@@ -19,7 +19,6 @@ rmblast \
 rna-star \
 rnammer \
 ropebwt2 \
-salmon \
 sambamba \
 samblaster \
 samtools \
