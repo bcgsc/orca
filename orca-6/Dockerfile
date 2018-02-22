@@ -56,7 +56,6 @@ tbb \
 tbl2asn \
 tophat \
 trans-abyss \
-transdecoder \
 transrate-tools \
 trf \
 trimadap \
