@@ -47,7 +47,6 @@ sqlite \
 squeezambler \
 sratoolkit \
 ssake \
-stacks \
 stringtie \
 swarm \
 szip \
