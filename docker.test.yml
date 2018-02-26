@@ -12,6 +12,9 @@ sut:
         brew linkage --test $$i || failed=1
       done
       for i in $$(brew list); do
-        brew test $$i || failed=1
+        brew test $$i 2>&1 | tee test.log
+        if grep -qx 'Error: .*: failed' test.log; then
+          failed=1
+        fi
       done
       exit $$failed
