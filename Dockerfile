@@ -29,3 +29,6 @@ Clone Sys::Info Test::Deep \
 List::MoreUtils Moo \
 # for prokka
 XML::Simple
+
+RUN Rscript -e 'install.packages(c("devtools", "ggplot2", "knitr", "rmarkdown", "tidyverse"), repos = c(CRAN = "https://cran.rstudio.com")); \
+source("https://bioconductor.org/biocLite.R"); biocLite()'
