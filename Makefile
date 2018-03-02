@@ -1,4 +1,4 @@
-all: versions.diff.html
+all: versions.diff.html docs/index.md
 
 .DELETE_ON_ERROR:
 .SECONDARY:
@@ -15,3 +15,6 @@ versions.current.tsv:
 
 versions.diff.html: versions.previous.tsv versions.current.tsv
 	Rscript scripts/diff-versions.R
+
+docs/index.md: docs/index.header.md versions.diff.html
+	(cat $<; echo; egrep -w 'script|link|div' versions.diff.html) >$@
