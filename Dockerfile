@@ -6,13 +6,9 @@ LABEL maintainer="Shaun Jackman <sjackman@gmail.com>" \
       org.label-schema.vendor="BC Cancer Genome Sciences Centre"
 
 # fonts-dejavu-core is required by graphviz.
-# libtext-soundex-perl is required by repeatmasker.
-# wamerican is required by brew test icu4c.
 RUN sudo apt-get update \
 	&& sudo apt-get install -y --no-install-recommends \
 		fonts-dejavu-core \
-		libtext-soundex-perl \
-		wamerican \
 	&& sudo rm -rf /var/lib/apt/lists/*
 
 RUN brew install \
