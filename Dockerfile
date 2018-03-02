@@ -20,3 +20,12 @@ kat \
 salmon
 
 RUN brew update && brew upgrade
+
+RUN cpanm \
+Bio::Perl \
+# for bowtie
+Clone Sys::Info Test::Deep \
+# for mlst
+List::MoreUtils Moo \
+# for prokka
+XML::Simple
