@@ -11,7 +11,7 @@ versions.previous.tsv:
 versions.current.tsv:
 	( printf "Formula\tVersion\n"; \
 	docker run --rm bcgsc/orca:latest sh -c 'brew list --versions; pip2 freeze' \
-		| tr -s ' =' '\t\t' | sort -f) >$@
+		| tr -s ' =' '\t\t' | gsed 's/\t.*\t/\t/' | sort -f) >$@
 
 versions.diff.html: versions.previous.tsv versions.current.tsv
 	Rscript scripts/diff-versions.R
