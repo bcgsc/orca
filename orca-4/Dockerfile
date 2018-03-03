@@ -1,4 +1,5 @@
 FROM bcgsc/orca-3:latest
+
 RUN brew install \
 harfbuzz \
 hisat \

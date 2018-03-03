@@ -15,6 +15,7 @@ automake \
 berkeley-db \
 cpanm \
 expat \
+jdk \
 less \
 libxml2 \
 matplotlib \

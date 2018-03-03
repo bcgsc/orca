@@ -1,5 +1,5 @@
 FROM bcgsc/orca-1:latest
-RUN brew install jdk
+
 RUN brew install \
 a5 \
 abacas \

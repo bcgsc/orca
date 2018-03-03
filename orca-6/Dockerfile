@@ -1,4 +1,5 @@
 FROM bcgsc/orca-5:latest
+
 RUN brew install \
 quast \
 quest \
