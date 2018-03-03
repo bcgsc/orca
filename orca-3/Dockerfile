@@ -24,13 +24,17 @@ dextractor \
 diamond \
 dida \
 discovar \
+disty \
+dsh-bio \
 dsk \
 dwgsim \
 e-mem \
+easel \
 edirect \
 emacs \
 exonerate  \
 fasta \
+fastani \
 fastml \
 fastq-tools \
 fastqc \
@@ -41,6 +45,7 @@ fermi \
 fermi-lite \
 fermi2 \
 fermikit \
+figtree \
 flash \
 flex \
 fqzcomp \
@@ -54,10 +59,13 @@ gatk \
 geneid \
 genewise \
 genometools \
+gepard \
+gfakluge \
 gingr \
 glimmerhmm \
 gmap-gsnap \
 grabix \
 graphlan \
 graphviz \
-gsl
+gsl \
+gzstream

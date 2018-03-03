@@ -19,6 +19,7 @@ minced \
 minia \
 miniasm \
 minimap \
+minimap2 \
 mir-prefer \
 mitofy \
 mlst \
@@ -41,6 +42,7 @@ oma \
 orthofinder \
 paml \
 pandaseq \
+panito \
 parallel \
 parsnp \
 pathd8 \
@@ -57,8 +59,8 @@ piler \
 pilercr \
 pilon \
 pixman \
-plink \
 pkg-config \
+plink \
 poa \
 poretools \
 prodigal \

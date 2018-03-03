@@ -6,14 +6,17 @@ abacas \
 abyss \
 abyss-explorer \
 ace-corrector \
+adam \
 adapterremoval \
 afra \
 amos \
 andi \
 anvio \
+aragorn \
 arcs \
 art \
 artemis \
+ascp \
 astral \
 atram \
 augustus \
@@ -23,6 +26,7 @@ bamhash \
 bamm \
 bamtools \
 bamutil \
+bandage \
 barrnap \
 bbtools \
 bcalm \
@@ -39,6 +43,7 @@ biobloomtools \
 biomake \
 bison \
 blast \
+blast-legacy \
 blat \
 bless \
 bowtie \
