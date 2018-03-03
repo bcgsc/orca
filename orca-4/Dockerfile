@@ -1,4 +1,4 @@
-FROM bcgsc/orca-3:2018.02.14
+FROM bcgsc/orca-3:latest
 RUN brew install \
 harfbuzz \
 hisat \

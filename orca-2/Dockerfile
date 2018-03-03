@@ -1,4 +1,4 @@
-FROM bcgsc/orca-1:2018.02.14
+FROM bcgsc/orca-1:latest
 RUN brew install jdk
 RUN brew install \
 a5 \

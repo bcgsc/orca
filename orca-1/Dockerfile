@@ -1,50 +1,17 @@
-FROM bcgsc/orca-0:2018.02.14
+FROM bcgsc/orca-0:latest
 LABEL maintainer="sjackan@gmail.com"
 
 ENV PERL5LIB /home/linuxbrew/perl5/lib/perl5
 
 # Install Perl packages
 RUN cpanm \
-Apache::DBI \
 Bio::Perl \
-Bio::Root::Version \
-Bit::Vector \
-Carp::Clan \
-Class::Inspector \
-Clone \
-DBD::SQLite \
-DBD::mysql \
-DBI \
-DB_File \
-File::Which \
-HTML::Entities \
-HTML::Parser \
-IO::All \
-IO::Prompt \
-Inline \
-Inline::C \
-LWP \
-LWP::Protocol::https \
-LWP::Simple \
-List::MoreUtils::XS \
-Module::Build \
-Moo \
-Parse::RecDescent \
-Perl::Unsafe::Signals \
-PerlIO::gzip \
-SOAP::Lite \
-SVG \
-Statistics::Descriptive \
-Term::ReadKey \
-Time::HiRes \
-URI \
-Unix::Processors \
-Want \
-XML::Parser \
-XML::Simple \
-forks \
-forks::shared \
-version
+# for bowtie
+Clone Sys::Info Test::Deep \
+# for mlst
+List::MoreUtils Moo \
+# for prokka
+XML::Simple
 
 # Install Python packages
 RUN pip2 install \
@@ -56,6 +23,15 @@ pysam \
 python-igraph \
 pyvcf \
 virtualenv
+
+# Install R packages
+RUN Rscript -e 'install.packages(repos = c(CRAN = "https://cran.rstudio.com"), c( \
+"devtools", \
+"ggplot2", \
+"knitr", \
+"rmarkdown", \
+"tidyverse")); \
+source("https://bioconductor.org/biocLite.R"); biocLite()'
 
 # Install Ruby packages
 RUN gem install \

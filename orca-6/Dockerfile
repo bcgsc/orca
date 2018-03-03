@@ -1,4 +1,4 @@
-FROM bcgsc/orca-5:2018.02.14
+FROM bcgsc/orca-5:latest
 RUN brew install \
 quast \
 quest \
@@ -19,6 +19,7 @@ rmblast \
 rna-star \
 rnammer \
 ropebwt2 \
+salmon \
 sambamba \
 samblaster \
 samtools \
@@ -73,7 +74,6 @@ vcftools \
 velvet \
 velvetoptimiser \
 viennarna \
-vim \
 vsearch \
 vt \
 weblogo \

@@ -1,4 +1,4 @@
-FROM bcgsc/orca-2:2018.02.14
+FROM bcgsc/orca-2:latest
 
 RUN brew install \
 canu \
@@ -50,6 +50,7 @@ fsa \
 fwdpp \
 gaemr \
 gatb \
+gatk \
 geneid \
 genewise \
 genometools \
