@@ -1,4 +1,4 @@
-FROM bcgsc/orca-7:latest
+FROM bcgsc/orca-6:latest
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>" \
       org.label-schema.description="Genomics Research Container Architecture" \
       org.label-schema.url="http://www.bcgsc.ca/services/orca" \
