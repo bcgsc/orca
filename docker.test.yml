@@ -11,7 +11,7 @@ sut:
       for i in $$(brew list | grep -vx jdk); do
         brew linkage --test $$i || failed=1
       done
-      for i in $$(brew list | egrep -vx 'beast2|discovar|idba|raxml|ropebwt2|ruby|trinity|unzip'); do
+      for i in $$(brew list | egrep -vx 'apache-spark|beast2|discovar|idba|raxml|ropebwt2|ruby|trinity|unzip'); do
         brew test $$i 2>&1 | tee test.log
         if grep -qx 'Error: .*: failed' test.log; then
           failed=1
