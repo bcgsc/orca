@@ -14,7 +14,7 @@ List::MoreUtils Moo \
 XML::Simple
 
 # Install Python packages
-RUN pip2 install \
+RUN pip3 install \
 biopython \
 cwlref-runner \
 htseq \

@@ -25,7 +25,7 @@ numpy \
 pandoc \
 perl \
 python \
-python3 \
+python@2 \
 r \
 ruby \
 scipy \
@@ -33,5 +33,4 @@ tcsh \
 unzip \
 vim \
 zip \
-zlib \
-&& ln -s python2 /home/linuxbrew/.linuxbrew/bin/python
+zlib
