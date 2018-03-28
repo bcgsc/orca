@@ -1,5 +1,7 @@
-FROM linuxbrew/linuxbrew:1.5.4
+FROM linuxbrew/linuxbrew:1.5.12
 LABEL maintainer="sjackman@gmail.com"
+
+ENV HOMEBREW_NO_AUTO_UPDATE=1
 
 # fonts-dejavu-core is required by graphviz.
 RUN sudo apt-get update \

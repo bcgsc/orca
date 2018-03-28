@@ -1,7 +1,5 @@
 FROM bcgsc/orca-2:latest
 
-ENV HOMEBREW_NO_AUTO_UPDATE=1
-
 RUN brew install \
 canu \
 cap3 \
