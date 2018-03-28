@@ -40,6 +40,7 @@ bfc \
 bioawk \
 biobloomtools \
 biomake \
+bioperl \
 bison \
 blast \
 blast-legacy \
