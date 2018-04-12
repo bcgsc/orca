@@ -1,4 +1,4 @@
-FROM linuxbrew/linuxbrew:1.5.12
+FROM linuxbrew/linuxbrew:1.6.0
 LABEL maintainer="sjackman@gmail.com"
 
 ENV HOMEBREW_NO_AUTO_UPDATE=1
