@@ -9,7 +9,8 @@ RUN sudo apt-get update \
 		fonts-dejavu-core \
 	&& sudo rm -rf /var/lib/apt/lists/*
 
-RUN brew tap brewsci/bio \
+RUN brew update \
+&& brew tap brewsci/bio \
 && brew tap brewsci/science \
 && brew install \
 autoconf \
