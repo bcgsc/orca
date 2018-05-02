@@ -1,7 +1,11 @@
 FROM bcgsc/orca-0:latest
 LABEL maintainer="sjackan@gmail.com"
 
-# Install Python packages
+# Install Python2 packages
+RUN pip2 install \
+biopython
+
+# Install Python3 packages
 RUN pip3 install \
 biopython \
 cwlref-runner \
