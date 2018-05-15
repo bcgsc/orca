@@ -66,4 +66,3 @@ prodigal \
 prokka \
 proteinortho \
 psmc
-
