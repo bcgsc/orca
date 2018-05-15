@@ -87,6 +87,6 @@ wiggletools \
 yaha
 
 RUN brew \
-update
-update
+update \
+update \
 upgrade
