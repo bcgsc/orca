@@ -1,0 +1,15 @@
+  profile:
+    name: "Default"
+    description: "Default Profile. Checks basic syntax."
+  line_rules:
+    FROM:
+      rules:
+        -
+          label: "is_latest_tag"
+          regex: /latest/
+          level: "error"
+          message: "base image uses 'latest' tag"
+          description: "using the 'latest' tag may cause unpredictable builds. It is recommended that a specific tag is used in the FROM line."
+          reference_url:
+            - "https://docs.docker.com/engine/reference/builder/"
+            - "#from"
