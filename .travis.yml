@@ -9,7 +9,7 @@ before_install:
 
 before_script:
   # Validate Docker files
-   - dockerfile_lint -f Dockerfile -r dockerfile_rules.yml
+   - dockerfile_lint -f Dockerfile
    
 script:
   - find . -name Dockerfile | xargs dockerfilelint
