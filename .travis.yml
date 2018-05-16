@@ -7,6 +7,16 @@ services:
 before_install:
   - npm install -g dockerfilelint
 
+before_script:
+  # Validate Docker files
+   - dockerfile_lint -r dockerfile_rules.yml -f orca-0/Dockerfile
+   - dockerfile_lint -r dockerfile_rules.yml -f orca-1/Dockerfile
+   - dockerfile_lint -r dockerfile_rules.yml -f orca-2/Dockerfile
+   - dockerfile_lint -r dockerfile_rules.yml -f orca-3/Dockerfile
+   - dockerfile_lint -r dockerfile_rules.yml -f orca-4/Dockerfile
+   - dockerfile_lint -r dockerfile_rules.yml -f orca-5/Dockerfile
+   - dockerfile_lint -r dockerfile_rules.yml -f orca-6/Dockerfile
+   
 script:
   - find . -name Dockerfile | xargs dockerfilelint
   - for dockerDir in *; do make $dockerDir; done
