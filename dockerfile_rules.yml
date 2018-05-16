@@ -15,7 +15,8 @@
             - "#from"
     RUN:
       rules:
-       - label: "sudo_use"
+       -
+         label: "sudo_use"
          regex: /sudo/
          level: "warn"
          message: "Use Of sudo Is Not Allowed"
