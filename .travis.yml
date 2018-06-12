@@ -12,4 +12,4 @@ before_script:
   # - dockerfile_lint -f Dockerfile -r dockerfile_rules.yaml
 
 script:
-  - find . -name Dockerfile | xargs dockerfile_lint -f {} -r dockerfile_rules.yaml
+  - find . -name Dockerfile | xargs -i dockerfile_lint -f {} -r dockerfile_rules.yaml
