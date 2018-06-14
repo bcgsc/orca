@@ -9,3 +9,4 @@ before_install:
 
 script:
   - find . -name Dockerfile | xargs -i dockerfile_lint -f {} -r dockerfile_rules.yaml
+
