@@ -3,10 +3,10 @@ sudo: required
 
 services:
   - docker
- 
- before_install:
-  - npm install -g dockerfilelint
- 
- script:
-  - find . -name Dockerfile | xargs dockerfilelint
-  - for dockerDir in *; do make $dockerDir; done
+
+before_install:
+  - npm install -g dockerfile_lint
+
+script:
+  - find . -name Dockerfile | xargs -i dockerfile_lint -f {} -r dockerfile_rules.yaml
+
