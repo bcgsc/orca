@@ -62,7 +62,6 @@ pixman \
 pkg-config \
 plink \
 poa \
-poretools \
 prodigal \
 prokka \
 proteinortho \
