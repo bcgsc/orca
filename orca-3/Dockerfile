@@ -53,7 +53,6 @@ freebayes \
 freec \
 fsa \
 fwdpp \
-gaemr \
 gatb \
 gatk \
 geneid \
@@ -65,7 +64,6 @@ gingr \
 glimmerhmm \
 gmap-gsnap \
 grabix \
-graphlan \
 graphviz \
 gsl \
 gzstream

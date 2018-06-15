@@ -88,5 +88,8 @@ yaha
 
 RUN brew \
 update \
+<<<<<<< HEAD
 update \
+=======
+>>>>>>> 6d62503... squashed and default rules lint
 upgrade
