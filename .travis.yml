@@ -5,10 +5,6 @@ services:
   - docker
 
 before_install:
-<<<<<<< HEAD
-=======
-
->>>>>>> 6d62503... squashed and default rules lint
   - npm install -g dockerfile_lint
 
 script:
