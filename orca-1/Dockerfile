@@ -30,4 +30,5 @@ RUN gem install \
 gnuplot \
 narray \
 RubyInline \
-terminal-table
+terminal-table \
+&& gem cleanup all
