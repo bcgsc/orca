@@ -1,4 +1,5 @@
 FROM bcgsc/orca-3:latest
+LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-4"
 
 RUN brew install \
 harfbuzz \

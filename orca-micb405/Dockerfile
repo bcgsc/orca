@@ -2,6 +2,8 @@
 # Only the `linuxbrew` user has right to edit the folder, not `linuxbrew` group!
 
 FROM bcgsc/orca:2017.10.12
+LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca"
+
 # Solution 1:
 # The Dockerfile bug: chmod increases the size of image, twice!
 # RUN chmod -R g+w /home/linuxbrew/.linuxbrew  >/dev/null
