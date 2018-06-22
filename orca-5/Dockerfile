@@ -1,4 +1,5 @@
 FROM bcgsc/orca-4:latest
+LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-5"
 
 RUN brew install \
 macse \

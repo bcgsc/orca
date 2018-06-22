@@ -1,4 +1,5 @@
 FROM bcgsc/orca-2:latest
+LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-3"
 
 RUN brew install \
 canu \

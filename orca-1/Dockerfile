@@ -1,5 +1,5 @@
 FROM bcgsc/orca-0:latest
-LABEL maintainer="sjackan@gmail.com"
+LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-1"
 
 # Install Python2 packages
 RUN pip2 install \

@@ -1,4 +1,5 @@
 FROM bcgsc/orca-5:latest
+LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-6"
 
 RUN brew install \
 quast \
