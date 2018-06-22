@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# ======================= Load Balance ======
+
+#Check if user is root
+if [[ $EUID -ne 0 ]]; then
+        echo $EUID
+        echo "Script must be run as root" 1>&2
+        exit 1
+fi
+
+NAME=$(id -un)_$UID
+USER=$(id -un)
+CONTAINER_HOSTNAME=$(id -un)-ORCA   # perhaps this needs to be updated to $(id -un)-ORCA if user is on orca2
+LOG_FILE=/orca_repo/access_log/docker_login.log
+
+# find users container -- if not in orca01 then search in orca02 -- save hostname
+USER_CONTAINER = $(docker ps -a --format "{{.ID}}\t{{.Names}}" | grep "$NAME" | cut -f1)
+
+# save the host their container was on of their last login  -or- @@@ determine where container is located
+USER_LOCATION =
+
+ORCA1= $USER@orca01.dmz.bcgsc.ca
+ORCA2= $USER@orca02.dmz.bcgsc.ca
+
+# outputs average load over the past 15 minutes
+# output: 0.05    call: ORCA1 LOAD_PARSE
+LOAD_PARSE= $(uptime | awk '{ print $12 }' | awk '{gsub ( ",","" ) ; print $0 }')
+
+# check the uptime #asks for password for both servers
+LOADAVG1= ssh $ORCA1$LOAD_PARSE
+LOADAVG2= ssh $ORCA2$LOAD_PARSE
+
+# in case we need to ensure load average number is lower than CPU count
+# also can divide load average by the number of CPUs to get % occupied (however orca1 and orca2 both have 40 CPUs)
+# output: 40    call: ORCA1 CPU_COUNT
+CPU_COUNT= grep processor /proc/cpuinfo | wc -l
+
+# load balance based on 15 minute load average
+FREE_LOCATION= (LOADAVG1<LOADAVG2)? $ORCA1 : $ORCA2
+
+
+# ======================= Migration ======
+LOGIN_SCRIPT="./usr/local/bin/orca"
+
+# run login script if already on optimal server
+if [ USER_LOCATION === FREE_LOCATION ]; then
+    sh LOGIN_SCRIPT
+fi
+
+# check if container is running
+if [ "$(docker inspect -f '{{.State.Running}}' $USER_CONTAINER)" ]; then
+    exec docker stop $USER_CONTAINER
+fi
+
+# saves the running or paused instance & write to a file
+exec docker export $CONTAINER_HOSTNAME > $USER_MIGRATE.tar
+
+#
+scp $USER_LOCATION$USER_MIGRATE.tar $FREE_LOCATION$/home/$USER
+echo "Migrated container $USER_CONTAINER from $USER_LOCATION to $FREE_LOCATION" >> $LOG_FILE
+
+exec docker import $USER_MIGRATE.tar
+
+# calling orca/login script will start up the container again
+sh LOGIN_SCRIPT
