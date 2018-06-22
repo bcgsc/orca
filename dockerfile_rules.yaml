@@ -34,7 +34,7 @@ line_rules:
     rules:
       - label: is_latest_tag
         regex: /latest/
-        level: error
+        level: info
         message: "base image uses 'latest' tag"
         description: "using the 'latest' tag may cause unpredictable builds. It is recommended that a specific tag is used in the FROM line or *-released which is the latest supported release."
         reference_url:
@@ -164,7 +164,7 @@ line_rules:
         valueRegex: "/[\\w.${}()\"'\\\\\\/~<>\\-?\\%:]+/"
         message: "Label 'Version' is missing or has invalid format"
         level: warn
-        required: true
+        required: false
         reference_url:
           - "http://docs.projectatomic.io/container-best-practices/#"
           - _recommended_labels_for_your_project
