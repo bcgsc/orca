@@ -5,6 +5,7 @@ sut:
     - -c
     - |
       set -eux
+      brew update
       brew doctor
       brew tests
       failed=0
