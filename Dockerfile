@@ -11,5 +11,3 @@ RUN brew install isl libpthread-stubs xorg-protocols
 
 # Fix trans-abyss: ImportError: No module named igraph
 RUN pip2 install python-igraph
-
-RUN brew update && brew upgrade
