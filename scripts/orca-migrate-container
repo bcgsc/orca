@@ -1,44 +1,42 @@
 #!/bin/bash
 
+# script is called to move existing container to another server
+# eg call: orca-migrate-container orca1 orca2
+
 NAME=$(id -un)_$UID
 USER=$(id -un)
 CONTAINER_HOSTNAME=$(id -un)-ORCA
 ORCA1=$USER@orca01.dmz.bcgsc.ca
 ORCA2=$USER@orca02.dmz.bcgsc.ca
 
-# find users container -- if not in orca01 then search in orca02 -- save hostname
 USER_CONTAINER=$(docker ps -a --format "{{.ID}}\t{{.Names}}" | grep "$NAME" | cut -f1)
 
-# perhaps it can be orca1 by default
-# this script is only called if user has a container already (migration)
-if [ $USER_CONTAINER ]; then
-    USER_LOCATION=ORCA1
-else
-    USER_LOCATION=ORCA2
-fi
+USER_HOST=$1
+NEW_HOST=$2
 
-# ======================= Migration ======
+# ======================= Migration =======
 
-# run login script if already on optimal server
-# eg. call method:     migrate $CONTAINER $FREE_LOCATION
-if [ $USER_LOCATION == $FREE_LOCATION ]; then
+if [ $USER_HOST == $NEW_HOST ]; then
     sh $LOGIN_SCRIPT
 fi
 
-# check if container is running or stopped 
-# export works on running and paused containers
-if [ ! "$(docker inspect -f '{{.State.Paused}}' $USER_CONTAINER)" ]; then
-    if [ "$(docker inspect -f '{{.State.Dead}}' $USER_CONTAINER)" ]; then
-        docker start $USER_CONTAINER
+# Only migrate stopped containers
+if [ "$(docker inspect -f '{{.State.Running}}' $USER_CONTAINER)" ]; then
+    if [ "$(docker inspect -f '{{.State.Paused}}' $USER_CONTAINER)" ]; then
+        docker unpause $USER_CONTAINER
         fi
-    docker pause $USER_CONTAINER
+    docker stop $USER_CONTAINER
 fi
 
-docker export $USER_CONTAINER > $USER_MIGRATE.tar
+docker export $USER_CONTAINER > $USER_CONTAINER.tar
 echo "Migrated container $USER_CONTAINER from $USER_LOCATION to $FREE_LOCATION" >&2
-docker import $USER_MIGRATE.tar
 
-# to start up this container again: docker run -ti USER_MIGRATE /bin/bash
+# Clean up 
+docker rm $USER_CONTAINER
+
+ssh $NEW_HOST
+docker import $USER_CONTAINER.tar $USER_CONTAINER
+docker run -ti $USER_CONTAINER /bin/bash
 
 exec sh $LOGIN_SCRIPT
 
