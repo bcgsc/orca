@@ -1,4 +1,6 @@
-FROM bcgsc/orca-6:2017.10.12
+FROM bcgsc/orca-6:2017.10.1
+LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca"
+
 USER root
 RUN echo '%orca_users ALL=(linuxbrew) NOPASSWD:ALL' >> /etc/sudoers 
 USER linuxbrew

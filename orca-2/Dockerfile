@@ -1,4 +1,5 @@
 FROM bcgsc/orca-1:latest
+LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-2"
 
 RUN brew install \
 a5 \

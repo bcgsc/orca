@@ -1,5 +1,5 @@
 FROM linuxbrew/linuxbrew:1.6.0
-LABEL maintainer="sjackman@gmail.com"
+LABEL maintainer="sjackman@gmail.com" name="bcgsc/orca-0"
 
 ENV HOMEBREW_NO_AUTO_UPDATE=1
 
