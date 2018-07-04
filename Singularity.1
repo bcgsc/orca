@@ -21,9 +21,6 @@ From: linuxbrew/linuxbrew
     echo 'PERL5LIB='$PERL5LIB > /etc/environment
     echo 'PATH='$PATH >> /etc/environment
 
-    su -c 'brew update' linuxbrew
-    su -c 'brew upgrade' linuxbrew
-
     su -c 'brew install perl -v' linuxbrew
     su -c 'brew install cpanm gcc gcc@4.9 zlib expat berkeley-db -v' linuxbrew
     su -c 'brew install mysql' linuxbrew
