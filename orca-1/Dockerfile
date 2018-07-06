@@ -2,8 +2,10 @@ FROM bcgsc/orca-0:latest
 LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-1"
 
 # Install Python2 packages
+# trans-abyss requires python-igraph.
 RUN pip2 install \
-biopython
+biopython \
+python-igraph
 
 # Install Python3 packages
 RUN pip3 install \
@@ -12,7 +14,6 @@ cwlref-runner \
 htseq \
 pandas \
 pysam \
-python-igraph \
 pyvcf \
 virtualenv
 
