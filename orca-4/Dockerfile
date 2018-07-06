@@ -22,9 +22,12 @@ iva \
 jellyfish \
 jpeg \
 jspecies \
+k8 \
 kaiju \
 kallisto \
 kat \
+kent-tools \
+kma \
 kmacs \
 kmc \
 kmergenie \
@@ -33,6 +36,7 @@ kollector \
 kr \
 kraken \
 last \
+lastz \
 libbigwig \
 libpll \
 libsequence \

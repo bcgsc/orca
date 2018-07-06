@@ -2,6 +2,7 @@ FROM bcgsc/orca-2:latest
 LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-3"
 
 RUN brew install \
+cannoli \
 canu \
 cap3 \
 cd-hit \
@@ -10,12 +11,14 @@ celera-assembler \
 centrifuge \
 cerulean \
 circlator \
+circos \
 clark \
 clonalframeml \
 clonehd \
 clustal-omega \
 clustal-w \
 cmake \
+consel \
 curl \
 cutadapt \
 daligner \
@@ -32,11 +35,16 @@ dwgsim \
 e-mem \
 easel \
 edirect \
+elph \
+ema \
 emacs \
+emboss \
+exabayes \
 exonerate  \
 fasta \
 fastani \
 fastml \
+fastp \
 fastq-tools \
 fastqc \
 fasttree \
@@ -47,8 +55,10 @@ fermi-lite \
 fermi2 \
 fermikit \
 figtree \
+finch-rs \
 flash \
 flex \
+flye \
 fqzcomp \
 freebayes \
 freec \
@@ -58,8 +68,10 @@ gatb \
 gatk \
 geneid \
 genewise \
+genome-painter \
 genometools \
 gepard \
+gfalint \
 gfakluge \
 gingr \
 glimmerhmm \
