@@ -4,6 +4,7 @@ LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-2"
 RUN brew install \
 a5 \
 abacas \
+abricate \
 abyss \
 abyss-explorer \
 ace-corrector \
@@ -21,12 +22,14 @@ ascp \
 astral \
 atram \
 augustus \
+bali-phy \
 bam-readcount \
 bam2wig \
 bamhash \
 bamm \
 bamtools \
 bamutil \
+bandange \
 barrnap \
 bbtools \
 bcalm \
@@ -37,6 +40,7 @@ beast2 \
 bedops \
 bedtools \
 beetl \
+berokka \
 bfc \
 bioawk \
 biobloomtools \
@@ -47,6 +51,7 @@ blast \
 blast-legacy \
 blat \
 bless \
+bonsai \
 bowtie \
 bowtie2 \
 breseq \

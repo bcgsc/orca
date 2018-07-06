@@ -4,6 +4,7 @@ LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-5"
 RUN brew install \
 macse \
 mafft \
+magic-blast \
 makedepend \
 maker \
 man-db \
@@ -24,7 +25,10 @@ minimap2 \
 mir-prefer \
 mitofy \
 mlst \
+mosdepth \
 mothur \
+mp-est \
+mpboost \
 mrbayes \
 multi-worm-tracker \
 mummer \
@@ -34,12 +38,14 @@ nanopolish \
 ncl \
 newick-utils \
 newicktools \
+nextflow \ 
 nonpareil \
 novoalign \
 ntcard \
 nxtrim \
 oases \
 oma \
+orfm \
 orthofinder \
 paml \
 pandaseq \
@@ -55,6 +61,7 @@ phlawd \
 phylip \
 phyml \
 phyutility \
+phyx \
 picard-tools \
 piler \
 pilercr \
@@ -63,6 +70,9 @@ pixman \
 pkg-config \
 plink \
 poa \
+porechop \
+portcullis \
+prank \
 prodigal \
 prokka \
 proteinortho \
