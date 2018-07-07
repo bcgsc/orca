@@ -11,7 +11,6 @@ python-igraph
 RUN pip3 install \
 biopython \
 cwlref-runner \
-htseq \
 pandas \
 pysam \
 pyvcf \
