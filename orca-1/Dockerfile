@@ -1,6 +1,7 @@
 FROM bcgsc/orca-0:latest
 LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-1"
 
+RUN apt-get install libmysqlclient-dev
 # Install Python3 packages
 RUN pip3 install \
 --upgrade setuptools \
