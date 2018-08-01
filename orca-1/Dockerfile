@@ -8,7 +8,6 @@ RUN pip2 install \
 biopython \
 python-igraph
 
-RUN sudo apt-get install libmysqlclient-dev
 # Install Python3 packages
 RUN pip3 install \
 --upgrade setuptools \
