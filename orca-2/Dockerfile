@@ -29,7 +29,7 @@ bamhash \
 bamm \
 bamtools \
 bamutil \
-bandange \
+bandage \
 barrnap \
 bbtools \
 bcalm \
