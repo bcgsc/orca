@@ -20,7 +20,6 @@ art \
 artemis \
 ascp \
 astral \
-atram \
 augustus \
 bali-phy \
 bam-readcount \
