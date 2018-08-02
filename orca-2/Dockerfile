@@ -4,7 +4,6 @@ LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-2"
 RUN brew install \
 a5 \
 abacas \
-abricate \
 abyss \
 abyss-explorer \
 ace-corrector \
