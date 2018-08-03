@@ -28,7 +28,7 @@ mlst \
 mosdepth \
 mothur \
 mp-est \
-mpboost \
+mpboot \
 mrbayes \
 multi-worm-tracker \
 mummer \
