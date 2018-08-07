@@ -81,7 +81,6 @@ treepl \
 trf \
 trimadap \
 trimmomatic \
-trinity \
 trnascan \
 unicycler \
 uniqtag \
