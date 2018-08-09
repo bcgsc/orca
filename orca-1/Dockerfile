@@ -14,6 +14,7 @@ RUN pip3 install \
 -U pip \
 --no-cache-dir biopython \
 cwlref-runner \
+git+https://github.com/pysam-developers/pysam \
 pandas \
 pyvcf \
 virtualenv
