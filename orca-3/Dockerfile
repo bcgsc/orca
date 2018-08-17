@@ -9,7 +9,6 @@ cd-hit \
 cegma \
 celera-assembler \
 centrifuge \
-cerulean \
 circlator \
 circos \
 clark \
