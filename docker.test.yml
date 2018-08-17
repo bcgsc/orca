@@ -11,7 +11,7 @@ sut:
       for i in $$(brew list | egrep -vx 'jdk'); do
         brew linkage --test $$i || failed=1
       done
-      for i in $$(brew list | egrep -vx 'PLACEHOLDER'); do
+      for i in $$(brew list | egrep -vx 'idba|pigz|raxml-ng|treepl|unicycler'); do
         brew test $$i 2>&1 | tee test.log
         if grep -qx 'Error: .*: failed' test.log; then
           failed=1
