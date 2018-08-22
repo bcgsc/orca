@@ -13,7 +13,6 @@ adapterremoval \
 afra \
 amos \
 andi \
-anvio \
 aragorn \
 arcs \
 art \
@@ -23,7 +22,6 @@ astral \
 augustus \
 bali-phy \
 bam-readcount \
-bam2wig \
 bamhash \
 bamm \
 bamtools \
