@@ -38,7 +38,6 @@ elph \
 ema \
 emacs \
 emboss \
-exabayes \
 exonerate  \
 fasta \
 fastani \
