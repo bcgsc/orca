@@ -11,7 +11,6 @@ From: linuxbrew/linuxbrew
 %post
     chown -R linuxbrew: /home/linuxbrew/
     chmod 777 /home/linuxbrew/.linuxbrew
-    chmod 777 /home/linuxbrew/.linuxbrew/Cellar
     chmod 777 /home/linuxbrew/.linuxbrew/Homebrew
 
     mkdir /uufs /scratch
