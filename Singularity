@@ -90,7 +90,6 @@ From: linuxbrew/linuxbrew
     su -c 'brew install \
     a5 \
     abacas \
-    abricate \
     abyss \
     abyss-explorer \
     ace-corrector \
@@ -118,7 +117,6 @@ From: linuxbrew/linuxbrew
     bcalm \
     bcftools \
     beagle \
-    beast \
     beast2 \
     bedops \
     bedtools \
