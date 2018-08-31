@@ -23,7 +23,6 @@ cutadapt \
 daligner \
 dazz_db \
 delly \
-dextractor \
 diamond \
 dida \
 discovar \

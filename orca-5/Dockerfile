@@ -11,6 +11,7 @@ man-db \
 mapsembler2 \
 maq \
 mash \
+maxbin2 \
 mcl \
 megahit \
 meme \

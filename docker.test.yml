@@ -8,10 +8,10 @@ sut:
       brew doctor
       brew tests
       failed=0
-      for i in $$(brew list | egrep -vx 'jdk|magic-blast|tbl2asn|swi-prolog'); do
+      for i in $$(brew list | egrep -vx 'jdk|magic-blast|phyx|tbl2asn|swi-prolog'); do
         brew linkage --test $$i || failed=1
       done
-      for i in $$(brew list | egrep -vx 'idba|pigz|raxml-ng|treepl|unicycler'); do
+      for i in $$(brew list | egrep -vx 'idba|igv|pigz|raxml-ng|ruby|treepl|unicycler'); do
         brew test $$i 2>&1 | tee test.log
         if grep -qx 'Error: .*: failed' test.log; then
           failed=1

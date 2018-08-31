@@ -6,6 +6,7 @@ LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-1"
 RUN pip2 install \
 -U pip \
 biopython \
+checkm-genome \
 python-igraph
 
 # Install Python3 packages
