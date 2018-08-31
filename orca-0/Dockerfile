@@ -20,6 +20,7 @@ berkeley-db \
 cpanm \
 expat \
 jdk \
+jdk@8 \
 less \
 libxml2 \
 matplotlib \

@@ -26,7 +26,6 @@ repeatscout \
 rmblast \
 rna-star \
 rnammer \
-ropebwt2 \
 rtg-tools \
 salmon \
 sambamba \
