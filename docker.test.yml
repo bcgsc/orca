@@ -8,7 +8,7 @@ sut:
       brew doctor
       brew tests
       failed=0
-      for i in $$(brew list | egrep -vx 'jdk|magic-blast|phyx|tbl2asn|swi-prolog|jdk@8|kat|matplotlib|numpy|portcullis|scipy'); do
+      for i in $$(brew list | egrep -vx 'jdk|magic-blast|tbl2asn|swi-prolog|jdk@8|kat|matplotlib|numpy|portcullis|scipy'); do
         brew linkage --test $$i || failed=1
       done
       for i in $$(brew list | egrep -vx 'idba|igv|pigz|raxml-ng|ruby|treepl|unicycler|valgrind|apache-spark|ropebwt2'); do
