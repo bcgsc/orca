@@ -16,7 +16,6 @@ indel-seq-gen \
 indelible \
 kraken2 \
 libmuscle \
-pymol \
 snippy \
 sumaclust \
 trimal \
