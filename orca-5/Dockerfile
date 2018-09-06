@@ -41,7 +41,7 @@ nanopolish \
 ncl \
 newick-utils \
 newicktools \
-nextflow \ 
+nextflow \
 nonpareil \
 novoalign \
 ntcard \

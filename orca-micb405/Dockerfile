@@ -11,5 +11,5 @@ LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca"
 # Solution 2
 # Allow users from `orca_users` group to run commands under 'linuxbrew' user
 USER root
-RUN echo '%orca_users ALL=(linuxbrew) NOPASSWD:ALL' >> /etc/sudoers 
+RUN echo '%orca_users ALL=(linuxbrew) NOPASSWD:ALL' >> /etc/sudoers
 USER linuxbrew
