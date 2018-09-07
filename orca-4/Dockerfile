@@ -3,6 +3,7 @@ LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-4"
 
 RUN brew install \
 harfbuzz \
+harvest-tools \
 hisat \
 hisat2 \
 hlaminer \
@@ -15,6 +16,8 @@ idba \
 igv \
 igvtools \
 impute2 \
+indel-seq-gen \
+indelible \
 infernal \
 iqtree \
 ispcr \
@@ -35,9 +38,11 @@ kmerstream \
 kollector \
 kr \
 kraken \
+kraken2 \
 last \
 lastz \
 libbigwig \
+libmuscle \
 libpll \
 libsequence \
 libtool \

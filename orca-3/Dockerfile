@@ -18,6 +18,7 @@ clustal-omega \
 clustal-w \
 cmake \
 consel \
+crumble \
 curl \
 cutadapt \
 daligner \
@@ -37,7 +38,9 @@ elph \
 ema \
 emacs \
 emboss \
+exabayes \
 exonerate  \
+express \
 fasta \
 fastani \
 fastml \
@@ -68,8 +71,8 @@ genewise \
 genome-painter \
 genometools \
 gepard \
-gfalint \
 gfakluge \
+gfalint \
 gingr \
 glimmerhmm \
 gmap-gsnap \

@@ -49,6 +49,7 @@ skesa \
 skewer \
 smalt \
 snap \
+snippy \
 snoscan \
 snp-dists \
 snp-sites \
@@ -65,6 +66,7 @@ squeezambler \
 sratoolkit \
 ssake \
 stringtie \
+sumaclust \
 swarm \
 szip \
 tagdust \
@@ -79,7 +81,9 @@ transrate-tools \
 treepl \
 trf \
 trimadap \
+trimal \
 trimmomatic \
+trinity \
 trnascan \
 unicycler \
 uniqtag \
@@ -92,6 +96,7 @@ vcflib \
 vcftools \
 velvet \
 velvetoptimiser \
+verticalize \
 viennarna \
 vsearch \
 vt \

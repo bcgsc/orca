@@ -11,6 +11,7 @@ ace-corrector \
 adam \
 adapterremoval \
 afra \
+ale \
 amos \
 andi \
 aragorn \
