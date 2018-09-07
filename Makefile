@@ -1,5 +1,8 @@
 all: versions.diff.html docs/index.md
 
+clean:
+	rm -f versions.previous.tsv versions.current.tsv versions.diff.html
+
 .DELETE_ON_ERROR:
 .SECONDARY:
 
