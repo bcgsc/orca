@@ -15,23 +15,28 @@ else
 	USER=$(id -un)
 	CONTAINER_HOSTNAME=$(id -un)-ORCA
 	LOG_FILE=/orca_repo/access_log/docker_login.log
-        FILES_LOCATION=/orca_repo/etc
+	PREFIX=/orca_repo
 
 	echo "Welcome to GSC ORCA Phase 1, USER $(id -un), Your home directory is mounted under /home/$USER"
-	echo "Currently installed tools can be found via 'brew list' and 'ls ~/Software/bin' in shell"
+	echo "Currently installed tools can be found via 'brew list' and 'ls /home/linuxbrew/.linuxbrew/bin' in shell"
 	echo "You can remotely transfer data via rsync/scp to your /home/$USER directory"
-#	echo "Your Hackathon project folder is mounted under /hackathon, please keep your raw data, scripts here"
 
 	CONTAINER=$(docker -H :4000 ps -a --format "{{.ID}}\t{{.Names}}" | grep "$NAME" | cut -f1)
 
 	if [ -z "$CONTAINER" ]; then
-        	echo -e "$(date +"%D %H:%M") \t USER $(id -un) FIRST LOGIN launching new container" >> $LOG_FILE
-        	exec docker -H :4000 run -u $(id -u):$(id -g) --name $NAME -h $CONTAINER_HOSTNAME -t -i -v /projects/hackathon/micb405:/home/micb405 -v $FILES_LOCATION/passwd:/etc/passwd:ro -v $FILES_LOCATION/group:/etc/group:ro -w /home/$USER -v $HOME:/home/$USER bcgsc/orca:micb405 /bin/bash
-        	echo "$(docker ps -a --format "{{.ID}}\t{{.Names}}" | grep "$NAME" | cut -f1) container created for USER $(id un) $UID" >> $LOG_FILE
+			echo -e "$(date +"%D %H:%M") \t USER $(id -un) FIRST LOGIN launching new container" >> $LOG_FILE
+			exec docker -H :4000 run -u $(id -u):$(id -g) --name $NAME -h $CONTAINER_HOSTNAME -i -t \
+				-v /projects/hackathon/micb405:/home/micb405 \
+				-v $PREFIX/etc/passwd:/etc/passwd:ro \
+				-v $PREFIX/etc/group:/etc/group:ro \
+				-v $HOME:/home/$USER \
+				-w /home/$USER \
+				bcgsc/orca:micb405 /bin/bash
+			echo "$(docker ps -a --format "{{.ID}}\t{{.Names}}" | grep "$NAME" | cut -f1) container created for USER $(id un) $UID" >> $LOG_FILE
 	else
-        	echo -e "$(date +"%D %H:%M") \t $CONTAINER FOUND retrieving old container" >> $LOG_FILE
+			echo -e "$(date +"%D %H:%M") \t $CONTAINER FOUND retrieving old container" >> $LOG_FILE
 		docker -H :4000 start $CONTAINER >> $LOG_FILE
 		exec docker -H :4000  exec -it  -u $(id -u):$(id -g) $CONTAINER /bin/bash
-        	echo "$CONTAINER restarted for USER $(id -un) $UID" >> $LOG_FILE
+			echo "$CONTAINER restarted for USER $(id -un) $UID" >> $LOG_FILE
 	fi
 fi
