@@ -26,12 +26,11 @@ else
 	if [ -z "$CONTAINER" ]; then
 			echo -e "$(date +"%D %H:%M") \t USER $(id -un) FIRST LOGIN launching new container" >> $LOG_FILE
 			exec docker -H :4000 run -u $(id -u):$(id -g) --name $NAME -h $CONTAINER_HOSTNAME -i -t \
-				-v /projects/hackathon/micb405:/home/micb405 \
 				-v $PREFIX/etc/passwd:/etc/passwd:ro \
 				-v $PREFIX/etc/group:/etc/group:ro \
 				-v $HOME:/home/$USER \
 				-w /home/$USER \
-				bcgsc/orca:micb405 /bin/bash
+				bcgsc/orca:latest /bin/bash
 			echo "$(docker ps -a --format "{{.ID}}\t{{.Names}}" | grep "$NAME" | cut -f1) container created for USER $(id un) $UID" >> $LOG_FILE
 	else
 			echo -e "$(date +"%D %H:%M") \t $CONTAINER FOUND retrieving old container" >> $LOG_FILE
