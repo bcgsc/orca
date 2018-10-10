@@ -28,6 +28,7 @@ else
 			exec docker -H :4000 run -u $(id -u):$(id -g) --name $NAME -h $CONTAINER_HOSTNAME -i -t \
 				-v $PREFIX/etc/passwd:/etc/passwd:ro \
 				-v $PREFIX/etc/group:/etc/group:ro \
+				-v $PREFIX/etc/sudoers.d/orca:/etc/sudoers.d/orca:ro \
 				-v $HOME:/home/$USER \
 				-w /home/$USER \
 				bcgsc/orca:latest /bin/bash
