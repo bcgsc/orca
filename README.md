@@ -10,6 +10,6 @@ To quickly get up and running with ORCA, run...
 docker run -it bcgsc/orca
 ```
 
-See [versions.tsv](versions.tsv) for the complete list of installed tools, and see the [ORCA](http://www.bcgsc.ca/services/orca) web site for more information. The changes in formulae versions from the previous release of ORCA are listed at <https://bcgsc.github.io/orca/>
+See [versions.tsv](https://github.com/bcgsc/orca/blob/master/versions.tsv) for the complete list of installed tools, and see the [ORCA](http://www.bcgsc.ca/services/orca) web site for more information. The changes in formulae versions from the previous release of ORCA are listed at <https://bcgsc.github.io/orca/>
 
 Configurig ORCA for local usage is provided [here](https://github.com/bcgsc/orca/blob/master/docs/user_manual.md). Configuring ORCA for use on a multi-user system is described for [Hackseq2017](https://github.com/bcgsc/orca/blob/master/docs/hackseq2017.md) and [MICB405](https://github.com/bcgsc/orca/blob/master/docs/micb405.md).
