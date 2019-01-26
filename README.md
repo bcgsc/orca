@@ -7,7 +7,7 @@ ORCA is a platform for bioinformatics analysis. It is suited for those wishing t
 To quickly get up and running with ORCA, run...
 
 ```sh
-docker run -it bcgsc/orca
+docker run -it -v$HOME:$HOME -w$HOME bcgsc/orca
 ```
 
 See [versions.tsv](https://github.com/bcgsc/orca/blob/master/versions.tsv) for the complete list of installed tools, and see the [ORCA](http://www.bcgsc.ca/services/orca) web site for more information. The changes in formulae versions from the previous release of ORCA are listed at <https://bcgsc.github.io/orca/>
