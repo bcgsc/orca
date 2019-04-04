@@ -25,7 +25,6 @@ less \
 libxml2 \
 matplotlib \
 miller \
-mysql \
 numpy \
 pandoc \
 perl \
