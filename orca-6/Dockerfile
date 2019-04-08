@@ -9,6 +9,7 @@ quicktree \
 quorum \
 r8s \
 racon \
+rails \
 rampart \
 rapidnj \
 raxml \

@@ -45,6 +45,8 @@ nextflow \
 nonpareil \
 novoalign \
 ntcard \
+ntedit \
+nthits \
 nxtrim \
 oases \
 oma \
