@@ -22,6 +22,7 @@ crumble \
 curl \
 cutadapt \
 daligner \
+das_tool \
 dazz_db \
 delly \
 diamond \
@@ -38,6 +39,7 @@ elph \
 ema \
 emacs \
 emboss \
+epa-ng \
 exabayes \
 exonerate  \
 express \
@@ -55,17 +57,23 @@ fermi-lite \
 fermi2 \
 fermikit \
 figtree \
+filtlong \
 finch-rs \
 flash \
 flex \
+flowcraft \
 flye \
 fqzcomp \
+fraggenescan \
 freebayes \
 freec \
 fsa \
 fwdpp \
+gappa \
 gatb \
 gatk \
+gblocks \
+gemma \
 geneid \
 genewise \
 genome-painter \
@@ -73,6 +81,7 @@ genometools \
 gepard \
 gfakluge \
 gfalint \
+gfaview \
 gingr \
 glimmerhmm \
 gmap-gsnap \

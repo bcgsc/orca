@@ -13,6 +13,7 @@ man-db \
 mapsembler2 \
 maq \
 mash \
+masurca \
 maxbin2 \
 mcl \
 megahit \
@@ -28,6 +29,7 @@ minimap2 \
 mir-prefer \
 mitofy \
 mlst \
+mmtf-cpp \
 mosdepth \
 mothur \
 mp-est \
@@ -42,11 +44,14 @@ ncl \
 newick-utils \
 newicktools \
 nextflow \
+nextgenmap \
+ngmaster \
 nonpareil \
 novoalign \
 ntcard \
 ntedit \
 nthits \
+nxrepair \
 nxtrim \
 oases \
 oma \
@@ -56,6 +61,7 @@ paml \
 pandaseq \
 panito \
 parallel \
+parasail \
 parsnp \
 pathd8 \
 pathvisio \
@@ -63,6 +69,7 @@ pcre \
 pear \
 phipack \
 phlawd \
+phylip \
 phyml \
 phyutility \
 phyx \
@@ -80,4 +87,6 @@ prank \
 prodigal \
 prokka \
 proteinortho \
-psmc
+psmc \
+pullseq \
+pymol
