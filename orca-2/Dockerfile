@@ -13,10 +13,10 @@ adam \
 adapterremoval \
 afra \
 ale \
-amos \
 andi \
 aragorn \
 arcs \
+arks \
 art \
 artemis \
 ascp \
@@ -30,6 +30,7 @@ bamtools \
 bamutil \
 bandage \
 barrnap \
+bazam \
 bbtools \
 bcalm \
 bcftools \
@@ -53,6 +54,7 @@ bless \
 bonsai \
 bowtie \
 bowtie2 \
+bracken \
 breseq \
 busco \
 bwa

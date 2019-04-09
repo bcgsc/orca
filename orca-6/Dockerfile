@@ -6,6 +6,7 @@ quast \
 quest \
 quickmerge \
 quicktree \
+quip \
 quorum \
 r8s \
 racon \
@@ -21,6 +22,7 @@ readseq \
 readsim \
 realphy \
 recon \
+repaq \
 repeatmasker \
 repeatmodeler \
 repeatscout \
@@ -28,6 +30,7 @@ rmblast \
 rna-star \
 rnammer \
 rtg-tools \
+salmid \
 salmon \
 sambamba \
 samblaster \
@@ -46,6 +49,7 @@ shovill \
 shrimp \
 sickle \
 simulate-pcr \
+ska \
 skesa \
 skewer \
 smalt \
@@ -66,12 +70,15 @@ squeakr \
 squeezambler \
 sratoolkit \
 ssake \
+staden-io-lib \
 stringtie \
 sumaclust \
 swarm \
+swipe \
 szip \
 tagdust \
 tasr \
+taxonkit \
 tbb \
 tbl2asn \
 tigmint \
@@ -87,6 +94,7 @@ trimmomatic \
 trinity \
 trnascan \
 unicycler \
+unikmer \
 uniqtag \
 uproc \
 vague \
@@ -103,4 +111,7 @@ vsearch \
 vt \
 weblogo \
 wiggletools \
+wtdbg2 \
+xmatchview \
+xssp \
 yaha
