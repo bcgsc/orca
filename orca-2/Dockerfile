@@ -28,7 +28,6 @@ bamhash \
 bamm \
 bamtools \
 bamutil \
-bandage \
 barrnap \
 bazam \
 bbtools \
