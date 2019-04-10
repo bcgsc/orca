@@ -3,6 +3,7 @@ LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-2"
 
 RUN brew update \
 && brew uninstall jdk jdk@8 \
+&& rm -rf /home/linuxbrew/.linuxbrew/share/man/ja \
 && brew install \
 a5 \
 abacas \
