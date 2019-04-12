@@ -9,7 +9,6 @@ mafft \
 magic-blast \
 makedepend \
 maker \
-man-db \
 mapsembler2 \
 maq \
 mash \

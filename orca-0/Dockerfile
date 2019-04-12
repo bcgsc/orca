@@ -6,7 +6,7 @@ ENV HOMEBREW_NO_AUTO_UPDATE=1
 # fonts-dejavu-core is required by graphviz.
 RUN sudo apt-get update \
 	&& sudo apt-get install -y --no-install-recommends \
-		fonts-dejavu-core \
+		fonts-dejavu-core man-db \
 	&& sudo rm -rf /var/lib/apt/lists/*
 
 RUN brew update \
