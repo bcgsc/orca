@@ -87,5 +87,4 @@ prodigal \
 prokka \
 proteinortho \
 psmc \
-pullseq \
-pymol
+pullseq
