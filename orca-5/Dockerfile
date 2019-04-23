@@ -68,7 +68,6 @@ pcre \
 pear \
 phipack \
 phlawd \
-phylip \
 phyml \
 phyutility \
 phyx \
