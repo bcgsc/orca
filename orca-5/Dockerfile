@@ -3,7 +3,8 @@ LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-5"
 
 RUN brew update
 
-RUN brew install \
+RUN brew upgrade ntcard \
+&& brew install \
 macse \
 mafft \
 magic-blast \
@@ -47,7 +48,6 @@ nextgenmap \
 ngmaster \
 nonpareil \
 novoalign \
-ntcard \
 ntedit \
 nthits \
 nxrepair \
