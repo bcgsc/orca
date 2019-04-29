@@ -110,7 +110,7 @@ viennarna \
 vsearch \
 vt \
 weblogo \
-wiggletools \
+brewsci/bio/wiggletools \
 wtdbg2 \
 xmatchview \
 xssp \
