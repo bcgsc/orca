@@ -18,7 +18,6 @@ raxml-ng \
 ray \
 rcorrector \
 readline \
-readseq \
 readsim \
 realphy \
 recon \
