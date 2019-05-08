@@ -2,6 +2,10 @@ FROM bcgsc/orca-5:latest
 LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-6"
 
 RUN brew update \
+&& brew uninstall vim \
+&& brew uninstall ruby \
+&& brew uninstall libbigwig \
+&& brew uninstall libdivsufsort \
 && brew install \
 quast \
 quest \
@@ -109,9 +113,9 @@ verticalize \
 viennarna \
 vsearch \
 vt \
-weblogo \
 wiggletools \
 wtdbg2 \
 xmatchview \
 xssp \
-yaha
+yaha \
+vim
