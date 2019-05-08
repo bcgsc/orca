@@ -43,7 +43,6 @@ last \
 lastz \
 legsta \
 libbigwig \
-libdivsufsort \
 libmuscle \
 libpll \
 libsequence \
