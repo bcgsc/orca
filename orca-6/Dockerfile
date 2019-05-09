@@ -6,11 +6,11 @@ RUN brew update \
 && brew uninstall ruby \
 && brew uninstall libbigwig \
 && brew uninstall libdivsufsort \
+&& brew update quicktree \
 && brew install \
 quast \
 quest \
 quickmerge \
-quicktree \
 quip \
 quorum \
 r8s \
