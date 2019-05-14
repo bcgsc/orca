@@ -14,7 +14,6 @@ htslib \
 humann2 \
 idba \
 igv \
-igvtools \
 impute2 \
 indel-seq-gen \
 indelible \

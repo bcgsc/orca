@@ -9,3 +9,13 @@ LABEL maintainer="Shaun Jackman <sjackman@gmail.com>" \
 RUN sudo apt-get update \
     && sudo apt-get install -y --no-install-recommends man-db \
     && sudo rm -rf /var/lib/apt/lists/*
+
+RUN brew update \
+    && brew uninstall igvtools
+
+RUN brew upgrade bioperl \
+maker \
+mothur \
+nanopolish \
+squeakr \
+xssp
