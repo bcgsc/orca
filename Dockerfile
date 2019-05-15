@@ -13,9 +13,13 @@ RUN sudo apt-get update \
 RUN brew update \
     && brew uninstall igvtools
 
-RUN brew upgrade bioperl \
+RUN brew upgrade arcs \
+arks \
+bioperl \
+links-scaffolder \
 maker \
 mothur \
 nanopolish \
+rails \
 squeakr \
 xssp
