@@ -3,8 +3,7 @@ LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-5"
 
 RUN brew update
 
-RUN brew upgrade ntcard \
-&& brew install \
+RUN brew install \
 macse \
 mafft \
 magic-blast \
@@ -48,6 +47,7 @@ nextgenmap \
 ngmaster \
 nonpareil \
 novoalign \
+ntcard \
 ntedit \
 nthits \
 nxrepair \
@@ -68,6 +68,7 @@ pcre \
 pear \
 phipack \
 phlawd \
+phylip \
 phyml \
 phyutility \
 phyx \
@@ -86,4 +87,5 @@ prodigal \
 prokka \
 proteinortho \
 psmc \
-pullseq
+pullseq \
+pymol

@@ -1,16 +1,11 @@
 FROM bcgsc/orca-5:latest
 LABEL maintainer="sjackan@gmail.com" name="bcgsc/orca-6"
 
-RUN brew update \
-&& brew uninstall vim \
-&& brew uninstall ruby \
-&& brew uninstall libbigwig \
-&& brew uninstall libdivsufsort \
-&& brew upgrade quicktree \
-&& brew install \
+RUN brew install \
 quast \
 quest \
 quickmerge \
+quicktree \
 quip \
 quorum \
 r8s \
@@ -117,5 +112,4 @@ wiggletools \
 wtdbg2 \
 xmatchview \
 xssp \
-yaha \
-vim
+yaha 
