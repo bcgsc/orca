@@ -5,21 +5,3 @@ LABEL maintainer="Shaun Jackman <sjackman@gmail.com>" \
       org.label-schema.url="http://www.bcgsc.ca/services/orca" \
       org.label-schema.vcs-url="https://github.com/bcgsc/orca" \
       org.label-schema.vendor="BC Cancer Genome Sciences Centre"
-
-RUN sudo apt-get update \
-    && sudo apt-get install -y --no-install-recommends man-db \
-    && sudo rm -rf /var/lib/apt/lists/*
-
-RUN brew update \
-    && brew uninstall igvtools
-
-RUN brew upgrade arcs \
-arks \
-bioperl \
-links-scaffolder \
-maker \
-mothur \
-nanopolish \
-rails \
-squeakr \
-xssp
