@@ -1,0 +1,34 @@
+#!/bin/sh 
+set -eu
+
+if [ "$1" = "-c" ];then
+        if echo $2 | grep "rsync\|scp"; then
+                exec $2
+        else
+                echo "======================================================="
+                echo "           Welcome to BCGSC ORCA Service          "
+                echo "Only direct rsync or scp file transfer commands allowed"
+                echo "======================================================="
+                exit 1
+        fi
+fi
+
+LOG_FILE=/orca_repo/access_log/singularity_login.log
+OVERLAY=/home/$USER/.orca/$USER_overlay.simg
+ORCA_CONTAINER=/orcaimage/orca.simg
+DATE=$(date --iso-8601=m)
+
+echo "Welcome to GSC ORCA Phase 1, USER $USER, Your home directory is mounted under /home/$USER"
+echo "Currently installed tools can be found via 'brew list' in shell"
+echo "You can remotely transfer data via rsync/scp to your /home/$USER directory"
+
+if [ -f "$OVERLAY" ]; then
+        echo -e "$DATE \t $CONTAINER FOUND retrieving old container for USER $USER" >> $LOG_FILE
+else
+        echo -e "$DATE \t USER $USER FIRST LOGIN launching new container" >> $LOG_FILE
+        singularity image.create --size 1000 $OVERLAY
+
+        echo "$OVERLAY container created for USER $USER" >> $LOG_FILE
+        echo "Your container has been created. Launching interactive shell.."
+fi
+singularity shell --overlay $OVERLAY $ORCA_CONTAINER
