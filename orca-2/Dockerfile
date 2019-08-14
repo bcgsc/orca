@@ -13,6 +13,7 @@ adapterremoval \
 afra \
 ale \
 andi \
+apbspdb2pqr \
 aragorn \
 arcs \
 arks \

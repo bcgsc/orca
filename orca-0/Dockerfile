@@ -1,4 +1,4 @@
-FROM linuxbrew/brew:2.0.5
+FROM linuxbrew/brew:2.1.10
 LABEL maintainer="sjackman@gmail.com" name="bcgsc/orca-0"
 
 ENV HOMEBREW_NO_AUTO_UPDATE=1
@@ -19,8 +19,7 @@ automake \
 berkeley-db \
 cpanm \
 expat \
-jdk \
-jdk@8 \
+adoptopenjdk \
 less \
 libxml2 \
 man-db \

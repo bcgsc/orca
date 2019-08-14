@@ -17,12 +17,14 @@ maxbin2 \
 mcl \
 megahit \
 meme \
+metabat \
 metaphlan \
 methpipe \
 mhap \
 minced \
 minia \
 miniasm \
+minigraph \
 minimap \
 minimap2 \
 mir-prefer \
@@ -45,6 +47,7 @@ newicktools \
 nextflow \
 nextgenmap \
 ngmaster \
+ngmerge \
 nonpareil \
 novoalign \
 ntcard \
@@ -68,7 +71,6 @@ pcre \
 pear \
 phipack \
 phlawd \
-phylip \
 phyml \
 phyutility \
 phyx \
@@ -82,6 +84,7 @@ plink \
 poa \
 porechop \
 portcullis \
+pplacer \
 prank \
 prodigal \
 prokka \
