@@ -47,6 +47,7 @@ fasta \
 fastani \
 fastml \
 fastp \
+fastq-pair \
 fastq-tools \
 fastqc \
 fasttree \

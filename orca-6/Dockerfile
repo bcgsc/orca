@@ -109,6 +109,7 @@ viennarna \
 vsearch \
 vt \
 wiggletools \
+wish \
 wtdbg2 \
 xmatchview \
 xssp \

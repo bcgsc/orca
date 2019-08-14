@@ -25,8 +25,8 @@ RUN Rscript -e 'install.packages(repos = c(CRAN = "https://cran.rstudio.com"), c
 "ggplot2", \
 "knitr", \
 "rmarkdown", \
-"tidyverse")); \
-source("https://bioconductor.org/biocLite.R"); biocLite()'
+"tidyverse", \
+"BiocManager")); BiocManager::install()'
 
 # Install Ruby packages
 RUN gem install \
