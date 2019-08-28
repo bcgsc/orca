@@ -11,9 +11,6 @@ RUN sudo apt-get update \
     && sudo rm -rf /var/lib/apt/lists/*
 
 RUN brew update \
-&& brew tap brewsci/base \
-&& brew tap brewsci/bio \
-&& brew tap brewsci/science \
 && brew upgrade \
 squeakr \
 xssp
