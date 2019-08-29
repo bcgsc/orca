@@ -15,13 +15,17 @@ RUN brew update \
 squeakr \
 xssp
 
-RUN brew reinstall --build-from-source \
+RUN brew uninstall --ignore-dependencies \
+apbspdb2pqr \
+swig \
+nxrepair \
 gmap-gsnap \
 meme \
 nextgenmap \
 repeatmasker
 
-RUN brew uninstall \
-apbspdb2pqr \
-swig \
-nxrepair
+RUN brew install --build-from-source \
+gmap-gsnap \
+meme \
+nextgenmap \
+repeatmasker
